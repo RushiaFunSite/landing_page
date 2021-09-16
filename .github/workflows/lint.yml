@@ -1,0 +1,16 @@
+name: lint
+
+# push時にlintをかける
+on: push
+
+# lintをかける
+jobs:
+  eslint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '14'
+      - run: yarn install
+      - run: yarn lint

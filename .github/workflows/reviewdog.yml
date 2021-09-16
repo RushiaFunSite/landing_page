@@ -1,0 +1,17 @@
+name: reviewdog
+
+# PR時にreviewdogを走らせる
+on: [pull_request]
+
+# reviewdogのeslintを走らせる
+jobs:
+  eslint:
+    name: eslint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: eslint with reviewdog
+        users: reviewdog/action-eslint@v1
+        with:
+          github_token: ${{ secrets.github_token }}
+          reporter: github-pr-review
