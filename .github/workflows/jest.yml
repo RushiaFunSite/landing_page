@@ -1,7 +1,7 @@
 name: jest
 
-# PR時にjestのテストを走らせる
-on: [pull_request]
+# push時にjestのテストを走らせる
+on: [push]
 
 # testする
 jobs:
