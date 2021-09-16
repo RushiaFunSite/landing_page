@@ -1,7 +1,10 @@
 name: lint
 
-# push時にlintをかける
-on: push
+# developブランチにpush時にlintをかける
+on:
+  push:
+    branches:
+      - develop
 
 # lintをかける
 jobs:
@@ -14,3 +17,4 @@ jobs:
           node-version: '14'
       - run: yarn install
       - run: yarn lint
+      - run: yarn prettier
