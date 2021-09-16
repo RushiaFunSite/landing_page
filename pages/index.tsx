@@ -2,9 +2,8 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 
-const Home: NextPage = () => {
-  console.log('test');
-  エラー起こしてみる;
+const Home: NextPage = () =>{
+  console.log("test");
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
       <Head>
