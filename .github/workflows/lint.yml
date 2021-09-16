@@ -1,10 +1,7 @@
 name: lint
 
 # developブランチにpush時にlintをかける
-on:
-  push:
-    branches:
-      - develop
+on: [push]
 
 # lintをかける
 jobs:

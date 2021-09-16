@@ -1,7 +1,7 @@
 name: reviewdog
 
 # push、PR時にreviewdogを走らせる
-on: [push, pull_request]
+on: [pull_request]
 
 # reviewdogのeslintを走らせる
 jobs:
