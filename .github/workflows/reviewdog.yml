@@ -1,7 +1,7 @@
 name: reviewdog
 
 # push、PR時にreviewdogを走らせる
-on: [push, pull_request]
+on: [pull_request]
 
 # reviewdogのeslintを走らせる
 jobs:
@@ -10,6 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - run: yarn install
       - name: eslint with reviewdog
         uses: reviewdog/action-eslint@v1
         with:
