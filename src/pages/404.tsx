@@ -21,7 +21,10 @@ const Custom404 = () => {
             申し訳ございません。ページが存在していません。
           </p>
 
-          <button className="px-4 inline py-2 text-sm font-medium leading-5 shadow text-white transition-colors duration-150 border border-transparent rounded-lg focus:outline-none focus:shadow-outline-blue bg-blue-600 active:bg-blue-600 hover:bg-blue-700">
+          <button
+            data-test-id="topPage"
+            className="px-4 inline py-2 text-sm font-medium leading-5 shadow text-white transition-colors duration-150 border border-transparent rounded-lg focus:outline-none focus:shadow-outline-blue bg-blue-600 active:bg-blue-600 hover:bg-blue-700"
+          >
             トップページへ戻る
           </button>
         </div>

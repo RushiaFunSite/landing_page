@@ -1,23 +1,31 @@
+import { Button } from '@/components/Button';
+import SNSButtonGroup from '@/components/molecules/snsbuttongroup/SNSButtonGroup';
+import Layout from '@/layout/layout';
 import type { NextPage } from 'next';
-import Head from 'next/head';
-import Image from 'next/image';
+import * as gtag from '@/lib/gtag';
 
 const Home: NextPage = () => {
   console.log('test');
-  return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+  const handleClicked = (e: { preventDefault: () => void }) => {
+    e.preventDefault();
 
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
+    gtag.event({
+      action: 'submit_form',
+      category: 'contact',
+      label: { test_label: 'eventTest' },
+    });
+  };
+  return (
+    <Layout>
+      <div className="px-20 text-center">
         <h1 className="text-6xl font-bold">
           Welcome to{' '}
           <a className="text-blue-600" href="https://nextjs.org">
             Next.js!
           </a>
         </h1>
+        {/* <SNSButtonGroup label="SNS" colorMode="#77d2b8" /> */}
+        <Button label="test" primary={true} onClick={() => handleClicked} />
 
         <p className="mt-3 text-2xl">
           Get started by editing{' '}
@@ -65,19 +73,8 @@ const Home: NextPage = () => {
             </p>
           </a>
         </div>
-      </main>
-
-      <footer className="flex items-center justify-center w-full h-24 border-t">
-        <a
-          className="flex items-center justify-center"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-        </a>
-      </footer>
-    </div>
+      </div>
+    </Layout>
   );
 };
 
