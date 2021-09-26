@@ -10,7 +10,9 @@
     "prettier": "prettier --write .",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -o build -s ./stories/assets",
-    "test": "jest"
+    "test": "jest",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
   },
   "engines": {
     "npm": "等プロジェクトではnpmではなくyarnを利用してください。"
@@ -37,11 +39,13 @@
     "@storybook/builder-webpack5": "^6.3.8",
     "@storybook/manager-webpack5": "^6.3.8",
     "@storybook/react": "^6.3.8",
+    "@testing-library/cypress": "^8.0.1",
     "@types/gtag.js": "^0.0.7",
     "@types/jest": "^27.0.1",
     "@types/react": "17.0.21",
     "autoprefixer": "^10.3.4",
     "babel-loader": "^8.2.2",
+    "cypress": "^8.4.1",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.2",
     "eslint-config-prettier": "^8.3.0",
