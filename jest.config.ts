@@ -8,6 +8,7 @@ const config: Config.InitialOptions = {
   moduleNameMapper: {
     '@/(.+)': '<rootDir>/src/$1',
   },
+  testPathIgnorePatterns: ['<rootDir>/cypress/'],
 };
 
 export default config;
