@@ -1,0 +1,24 @@
+.sns_button_group__container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  justify-content: center;
+  align-items: center;
+
+  @apply text-white bg-blue-600;
+  padding: 8px;
+  border-radius: 40px;
+
+  &__title {
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 12px;
+  }
+  &__icon {
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+}

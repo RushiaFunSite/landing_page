@@ -1,4 +1,4 @@
-import '../styles/globals.scss';
+import '../src/styles/globals.scss';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 
 export const parameters = {
