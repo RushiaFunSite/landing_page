@@ -2,7 +2,7 @@ import React, { ReactChild } from 'react';
 import styles from './snsbutton.module.scss';
 import Router from 'next/router';
 
-type SNSProps = {
+export type SNSProps = {
   children: ReactChild;
   sns: string;
   colorMode?: string;
