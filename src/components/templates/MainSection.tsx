@@ -12,7 +12,7 @@ const MainSection: VFC = () => {
               <div className={styles.container__frame__title__backgroundImage}>
                 <div className="flex flex-col justify-center items-center text-center mt-2">
                   <p className={styles.title__animation1}>UruhaRushia</p>
-                  <span className={styles.title__animation2}>fanSite</span>
+                  <span className={styles.title__animation2}>fanSite!</span>
                 </div>
               </div>
             </div>
