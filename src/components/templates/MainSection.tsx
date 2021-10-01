@@ -1,5 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { VFC } from 'react';
-import Image from 'next/image';
+// import Image from 'next/image';
 import styles from './mainsection.module.scss';
 
 const MainSection: VFC = () => {
@@ -19,7 +20,7 @@ const MainSection: VFC = () => {
             <div className="flex-grow text-center">
               <div className="flex flex-wrap justify-center">
                 <div className="w-4/5 lg:w-3/5 sm:w-3/5 px-4">
-                  <Image
+                  <img
                     alt="rushia"
                     src="/uruharushia_.png"
                     className="max-w-full h-auto align-middle border-none"
