@@ -1,7 +1,7 @@
 import type { AppProps } from 'next/app';
 import React from 'react';
 import '@/styles/globals.scss';
-import GoogleAnalytics from '@/components/GoogleAnalytics';
+import GoogleAnalytics from '@/components/wrapperComponent/GoogleAnalytics';
 import usePageView from '@/hooks/usePageView';
 
 function MyApp({ Component, pageProps }: AppProps) {
