@@ -10,6 +10,7 @@ import { IconType } from 'react-icons';
 // conponents
 import HeaderLinkLabel from '../../atoms/linkLabels/headerLinkLabel';
 import HeaderTitle from '../../molecules/headerItems/headerTitle';
+import styles from './header.module.scss';
 
 type Service = {
   name: string;
@@ -58,10 +59,16 @@ function classNames(...classes: any[]) {
   return classes.filter(Boolean).join(' ');
 }
 
-const Header: VFC = () => {
+type headerProps = {
+  isActive: boolean;
+};
+
+const Header: VFC<headerProps> = (props) => {
+  const style = props.isActive ? styles.active : styles.notActive;
+
   return (
-    <header>
-      <Popover className="relative bg-transparent">
+    <header className={style}>
+      <Popover className="relative bg-white bg-opacity-75">
         {({ open }) => (
           <>
             <div className="w-full mx-auto px-4 sm:px-6">
