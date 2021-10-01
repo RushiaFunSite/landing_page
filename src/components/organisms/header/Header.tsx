@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { VFC } from 'react';
 import Link from 'next/link';
 import { Popover, Transition } from '@headlessui/react';
+// icons
 import { VscMenu, VscChevronDown, VscClose, VscTwitter } from 'react-icons/vsc';
 import { FaYoutube, FaQuestion } from 'react-icons/fa';
 import { GiPlayButton } from 'react-icons/gi';
 import { RiHandHeartLine } from 'react-icons/ri';
 import { IconType } from 'react-icons';
-import LinkLabel from '@/components/atoms/linkLabel/LinkLabel';
+// conponents
+import HeaderLinkLabel from '../../atoms/linkLabels/headerLinkLabel';
+import HeaderTitle from '../../molecules/headerItems/headerTitle';
 
 type Service = {
   name: string;
@@ -55,27 +58,23 @@ function classNames(...classes: any[]) {
   return classes.filter(Boolean).join(' ');
 }
 
-const Header = () => {
+const Header: VFC = () => {
   return (
     <header>
-      <Popover className="relative bg-white">
+      <Popover className="relative bg-transparent">
         {({ open }) => (
           <>
             <div className="w-full mx-auto px-4 sm:px-6">
-              <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
+              <div className="flex justify-between items-center py-6 md:justify-start md:space-x-10">
                 <div className="flex justify-start lg:w-0 lg:flex-1">
                   <Link href="/">
                     <a>
-                      <div className="flex justify-center items-center text-2xl">
-                        <p>
-                          潤羽るしあ<span className="text-green-500">ファンサイト</span>
-                        </p>
-                      </div>
+                      <HeaderTitle />
                     </a>
                   </Link>
                 </div>
                 <div className="-mr-2 -my-2 md:hidden">
-                  <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                  <Popover.Button className="bg-transparent rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                     <span className="sr-only">Open menu</span>
                     <VscMenu className="h-6 w-6" aria-hidden="true" />
                   </Popover.Button>
@@ -87,7 +86,7 @@ const Header = () => {
                         <Popover.Button
                           className={classNames(
                             open ? 'text-gray-900' : 'text-gray-500',
-                            'group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-400',
+                            'group bg-transparent rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-400',
                           )}
                         >
                           <span>サービス</span>
@@ -155,8 +154,9 @@ const Header = () => {
                       </>
                     )}
                   </Popover>
-                  <LinkLabel href="#" label="お知らせ" />
-                  <LinkLabel href="#" label="お問い合わせ" />
+                  <HeaderLinkLabel href="#AboutSection" label="潤羽るしあとは" />
+                  <HeaderLinkLabel href="#GoodsSection" label="グッズ紹介" />
+                  <HeaderLinkLabel href="#FAQSection" label="Q & A" />
                 </Popover.Group>
               </div>
             </div>
@@ -178,11 +178,7 @@ const Header = () => {
                 <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
                   <div className="pt-5 pb-6 px-5">
                     <div className="flex items-center justify-between">
-                      <div>
-                        <p>
-                          Next<span className="text-green-500">X</span>
-                        </p>
-                      </div>
+                      <HeaderTitle />
                       <div className="-mr-2">
                         <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                           <span className="sr-only">Close menu</span>
@@ -210,8 +206,9 @@ const Header = () => {
                   </div>
                   <div className="py-6 px-5 space-y-6">
                     <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                      <LinkLabel href="#" label="お知らせ" />
-                      <LinkLabel href="#" label="お問い合わせ" />
+                      <HeaderLinkLabel href="#AboutSection" label="潤羽るしあとは" />
+                      <HeaderLinkLabel href="#GoodsSection" label="グッズ紹介" />
+                      <HeaderLinkLabel href="#FAQSection" label="Q & A" />
                     </div>
                   </div>
                 </div>
