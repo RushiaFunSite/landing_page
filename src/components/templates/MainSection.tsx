@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { VFC } from 'react';
 // import Image from 'next/image';
 import styles from './mainsection.module.scss';
