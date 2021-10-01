@@ -3,22 +3,22 @@ name: storybook_deploy
 on:
   push:
     branches:
-      - staging
+      - develop
 
 jobs:
   deploy:
-    name: storybook_deploy
+    name: deploy_for_Chromatic
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v2
         with:
           node-version: '14'
       - run: yarn install
-      - name: build storybook
-        run: yarn build-storybook
-      - name: deploy
-        uses: JamesIves/github-pages-deploy-action@4.1.5
+      - name: Publish to Chromatic
+        uses: chromaui/action@v1
         with:
-          branch: gh-pages
-          folder: build
+          token: ${{ secrets.GITHUB_TOKEN }}
+          projectToken: ${{ secrets.CHROMATIC_TOKEN }}
