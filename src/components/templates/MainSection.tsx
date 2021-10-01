@@ -22,7 +22,7 @@ const MainSection: VFC = () => {
                 <div className="w-4/5 lg:w-3/5 sm:w-3/5 px-4">
                   <img
                     alt="rushia"
-                    src="/uruharushia_.png"
+                    src="/uruharushia_.svg"
                     className="max-w-full h-auto align-middle border-none"
                     width={'400px'}
                     height={'800px'}
