@@ -9,7 +9,7 @@
     "lint": "next lint",
     "prettier": "prettier --write .",
     "storybook": "start-storybook -s ./public -p 6006",
-    "build-storybook": "build-storybook -o build -s ./stories/assets",
+    "build-storybook": "build-storybook",
     "test": "jest",
     "cy:open": "cypress open",
     "cy:run": "cypress run"
@@ -45,6 +45,7 @@
     "@types/react": "17.0.21",
     "autoprefixer": "^10.3.4",
     "babel-loader": "^8.2.2",
+    "chromatic": "^5.10.2",
     "cypress": "^8.4.1",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.2",
