@@ -1,6 +1,7 @@
 import Layout from '@/layout/layout';
 import React from 'react';
 import Link from 'next/link';
+import AnchorLinkLabel from '@/components/atoms/linkLabels/anchorLinkLabel';
 
 const termsOfUse = () => {
   return (
@@ -17,9 +18,10 @@ const termsOfUse = () => {
               <div className="ml-12">
                 <p>
                   この利用規約（以下，「本規約」といいます。）は、カバー株式会社（
-                  <Link href="https://www.hololive.tv/terms">
-                    <a>二次創作ガイドライン</a>
-                  </Link>
+                  <AnchorLinkLabel
+                    label="二次創作ガイドライン"
+                    href="https://www.hololive.tv/terms"
+                  />
                   ）に従いサービス開発のほうを行っております。
                 </p>
                 <p>
