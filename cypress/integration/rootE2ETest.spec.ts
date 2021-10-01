@@ -1,6 +1,7 @@
 it('ルートパスに訪問できるか', () => {
   cy.visit('/');
 });
-it('ルートにあるボタンをクリックできるか', () => {
-  cy.get('[data-test-id=test]').click();
+it('メインセクションに内容が含まれているか', () => {
+  cy.contains('UruhaRushia');
+  cy.contains('fanSite!');
 });

@@ -1,0 +1,17 @@
+.header__container {
+  @apply flex justify-center items-center lg:text-2xl;
+  &__image {
+    // layout
+    @apply rounded-lg flex flex-col justify-center px-8;
+    // image設定
+    background-image: url('../../../../public/butterfly.svg');
+    height: 60px;
+    width: 70px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  &__label {
+    @apply text-green-500;
+  }
+}

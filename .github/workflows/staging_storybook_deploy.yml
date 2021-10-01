@@ -1,9 +1,12 @@
 name: storybook_deploy
 
-on:
-  push:
-    branches:
-      - develop
+# 一時的にデプロイ状況を見るためにpush時にデプロイが走るように変更
+# on:
+#   push:
+#     branches:
+#       - develop
+
+on: push
 
 jobs:
   deploy:
