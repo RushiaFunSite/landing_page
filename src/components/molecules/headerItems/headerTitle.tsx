@@ -5,10 +5,10 @@ import styles from './headertitle.module.scss';
 
 const HeaderTitle = () => {
   return (
-    <div className="flex justify-center items-center lg:text-2xl">
-      <div className={styles.titleImage}></div>
+    <div className={styles.header__container}>
+      <div className={styles.header__container__image}></div>
       <p>
-        潤羽るしあ<span className="text-green-500">ファンサイト</span>
+        潤羽るしあ<span className={styles.header__container__label}>ファンサイト</span>
       </p>
     </div>
   );
