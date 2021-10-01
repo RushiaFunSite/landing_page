@@ -1,6 +1,9 @@
 $breakpoints: (
   'pc': 'screen and (min-width: 761px)',
   'sp': 'screen and (max-width: 760px)',
+  'galaxy': 'screen and (max-width: 360px)',
+  'mini': 'screen and (max-height: 667px)',
+  'iphoneplus': 'screen and (max-height: 736px)',
 ) !default;
 
 @mixin mq($breakpoint: pc) {
@@ -31,29 +34,73 @@ $breakpoints: (
       border: solid 2.5px #77d2b8;
       border-radius: 30px;
     }
-    // Titleと画像
-    &__items {
-      @apply flex justify-center items-center h-full;
+  }
+  // Titleと画像
+  &__items {
+    // @apply flex justify-center items-center h-full;
+    position: absolute;
+    // overflow: auto;
+    @include mq() {
+      top: 60px;
+      left: 40px;
+      width: calc(100% - 80px);
+      height: calc(100% - 80px);
     }
-    &__title {
-      @apply flex lg:flex-row flex-col justify-center items-center w-full;
-      &__backgroundImage {
-        // layout
-        @apply rounded-lg flex flex-col justify-center px-8;
-        // image設定
-        background-image: url('../../../public/butterfly_animation.svg');
-        width: auto;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-        @include mq() {
-          height: 400px;
-        }
-        @include mq(sp) {
-          height: 200px;
-        }
+    @include mq(sp) {
+      top: 40px;
+      left: 20px;
+      width: calc(100% - 40px);
+      height: calc(100% - 80px);
+    }
+  }
+  &__title {
+    @apply flex lg:flex-row flex-col justify-center items-center w-full;
+    &__backgroundImage {
+      // layout
+      @apply rounded-lg flex flex-col justify-center px-8;
+      // image設定
+      background-image: url('../../../public/butterfly_animation.svg');
+      width: auto;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      @include mq() {
+        height: 400px;
+      }
+      @include mq(sp) {
+        height: 200px;
       }
     }
+  }
+}
+
+.rushiaImg {
+  // layout
+  @apply max-w-full h-auto align-middle border-none;
+  // image設定
+  background-image: url('../../../public/uruharushia_.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  @include mq() {
+    height: 720px;
+    width: 347px;
+  }
+  @include mq(sp) {
+    height: 600px;
+    width: 300px;
+  }
+  @include mq(mini) {
+    height: 380px;
+    width: 300px;
+  }
+  @include mq(iphoneplus) {
+    height: 450px;
+    width: 300px;
+  }
+  @include mq(galaxy) {
+    height: 350px;
+    width: 300px;
   }
 }
 
