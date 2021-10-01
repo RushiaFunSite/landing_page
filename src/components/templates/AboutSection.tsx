@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { VFC } from 'react';
 
 const AboutSection: VFC = () => {
