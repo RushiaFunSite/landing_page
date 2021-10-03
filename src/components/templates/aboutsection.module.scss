@@ -1,0 +1,25 @@
+.avaterImage {
+  // layout
+  @apply w-full align-middle rounded absolute;
+  // image設定
+  background-image: url('../../../public/RushiaAvator.png');
+  left: 0;
+  top: -100px;
+  max-width: 580px;
+  height: 380px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  @media screen and (max-height: 667px) {
+    top: -210px;
+    height: 220px;
+  }
+  @media screen and (max-width: 760px) {
+    top: -210px;
+    height: 260px;
+  }
+  @media screen and (max-height: 736px) {
+    top: -210px;
+    height: 290px;
+  }
+}
