@@ -11,7 +11,7 @@ import { IconType } from 'react-icons';
 import HeaderLinkLabel from '../../atoms/linkLabels/headerLinkLabel';
 import HeaderTitle from '../../molecules/headerItems/headerTitle';
 import styles from './header.module.scss';
-import useFetchHeaderItem from '@/hooks/useFetchHeaderItem';
+import useFetchHeaderItem from '../../../hooks/useFetchHeaderItem';
 
 function classNames(...classes: any[]) {
   return classes.filter(Boolean).join(' ');
