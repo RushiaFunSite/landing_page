@@ -1,0 +1,43 @@
+{
+  "headerData": {
+    "headerItems": [
+      { "headerLabel": "潤羽るしあとは", "href": "#AboutSection" },
+      { "headerLabel": "グッズ紹介", "href": "#GoodsSection" },
+      { "headerLabel": "Q & A", "href": "#FAQSection" }
+    ],
+
+    "services": [
+      {
+        "serviceLabel": "アプリ",
+        "serviceItems": [
+          {
+            "serviceName": "クイズ",
+            "description": "潤羽るしあちゃんについてのクイズです。",
+            "href": "/",
+            "isRunning": false
+          },
+          {
+            "serviceName": "るしあちゃんボタン",
+            "description": "るしあちゃんボタンです。",
+            "href": "/",
+            "isRunning": false
+          },
+          {
+            "serviceName": "るしあちゃんなでなで",
+            "description": "るしあちゃん不足でなでなでしたいときに撫でられるサービスです。",
+            "href": "/",
+            "isRunning": false
+          }
+        ]
+      }
+    ],
+
+    "menuActions": [
+      {
+        "actionName": "Youtube",
+        "href": "https://www.youtube.com/channel/UCl_gCybOJRIgOXw6Qb4qJzQ"
+      },
+      { "actionName": "Twitter", "href": "https://twitter.com/uruharushia" }
+    ]
+  }
+}
