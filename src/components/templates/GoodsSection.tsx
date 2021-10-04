@@ -1,54 +1,38 @@
 /* eslint-disable @next/next/link-passhref */
 /* eslint-disable @next/next/no-img-element */
-import Link from 'next/link';
 import React, { VFC } from 'react';
+import ShopCard from '../molecules/shopcard/ShopCard';
 
 const GoodsSection: VFC = () => {
   return (
-    <section id="GoodsSection" className="block relative z-1 bg-blueGray-600">
-      <div className="container mx-auto">
-        <div className="justify-center flex flex-wrap">
-          <div className="w-full lg:w-12/12 px-4  -mt-24">
-            <div className="flex flex-wrap">
-              <div className="w-full lg:w-4/12 px-4">
-                <h5 className="text-xl font-semibold pb-4 text-center">Login Page</h5>
-                <Link href="/">
-                  <div className="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
-                    <img
-                      alt="..."
-                      className="align-middle border-none max-w-full h-auto rounded-lg"
-                      src="/Error.jpg"
-                    />
-                  </div>
-                </Link>
-              </div>
-
-              <div className="w-full lg:w-4/12 px-4">
-                <h5 className="text-xl font-semibold pb-4 text-center">Profile Page</h5>
-                <Link href="/">
-                  <div className="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
-                    <img
-                      alt="..."
-                      className="align-middle border-none max-w-full h-auto rounded-lg"
-                      src="/Error.jpg"
-                    />
-                  </div>
-                </Link>
-              </div>
-
-              <div className="w-full lg:w-4/12 px-4">
-                <h5 className="text-xl font-semibold pb-4 text-center">Landing Page</h5>
-                <Link href="/">
-                  <div className="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
-                    <img
-                      alt="..."
-                      className="align-middle border-none max-w-full h-auto rounded-lg"
-                      src="/Error.jpg"
-                    />
-                  </div>
-                </Link>
-              </div>
+    <section id="GoodsSection">
+      <div
+        // fixed
+        className="min-w-screen h-screen animated fadeIn faster left-0 top-0 flex justify-center items-center inset-0 z-50 outline-none focus:outline-none bg-no-repeat bg-center bg-cover"
+        id="modal-id"
+      >
+        <div className="min-h-screen flex flex-col items-center justify-center ">
+          <div className="justify-center text-center flex flex-wrap mt-24">
+            <div className="w-full md:w-6/12 px-12 md:px-4">
+              <h2 className="font-semibold text-4xl">グッズ紹介</h2>
+              <p className="text-lg leading-relaxed mt-4 mb-4 text-blueGray-500">
+                現在潤羽るしあのグッズは公式ストアで販売されています。特にBoothでは周年記念グッズや誕生日グッズなどが販売されています。
+              </p>
             </div>
+          </div>
+          <div className="grid mt-8 mb-8 gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-2">
+            <ShopCard
+              shopCategory="公式"
+              shopImage="/booth.PNG"
+              shopName="Booth"
+              shopLinkText="https://hololive.booth.pm/"
+            />
+            <ShopCard
+              shopCategory="公式"
+              shopImage="/hololivestore.PNG"
+              shopName="ホロライブ公式ショップ"
+              shopLinkText="https://shop.hololivepro.com/"
+            />
           </div>
         </div>
       </div>
