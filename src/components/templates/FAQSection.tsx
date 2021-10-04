@@ -3,59 +3,93 @@ import React, { VFC } from 'react';
 
 const FAQSection: VFC = () => {
   return (
-    <section id="FAQSection" className="pb-16 bg-blueGray-200 relative pt-32">
-      <div
-        className="-mt-20 top-0 bottom-auto left-0 right-0 w-full absolute h-20"
-        style={{ transform: 'translateZ(0)' }}
-      >
-        <svg
-          className="absolute bottom-0 overflow-hidden"
-          xmlns="http://www.w3.org/2000/svg"
-          preserveAspectRatio="none"
-          version="1.1"
-          viewBox="0 0 2560 100"
-          x="0"
-          y="0"
-        >
-          <polygon
-            className="text-blueGray-200 fill-current"
-            points="2560 0 2560 100 0 100"
-          ></polygon>
-        </svg>
-      </div>
+    <section id="FAQSection" className="bg-blueGray-200 mb-24">
+      <div className="container px-5 py-24 mx-auto">
+        <div className="text-center mb-20">
+          <h1 className="sm:text-3xl text-2xl font-medium text-center title-font text-gray-900 mb-4">
+            よくあるご質問（FAQ:Frequently Asked Question）
+          </h1>
+          <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
+            よくある質問や配信を楽しむためのルールを引用しています。
+          </p>
+        </div>
+        <div className="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
+          <div className="w-full lg:w-1/2 px-4 py-2">
+            <details className="mb-4">
+              <summary className="font-semibold  bg-gray-200 rounded-md py-2 px-4">
+                待機中のルール
+              </summary>
 
-      <div className="container mx-auto">
-        <div className="flex flex-wrap justify-center bg-white shadow-xl rounded-lg -mt-64 py-16 px-12 relative z-10">
-          <div className="w-full text-center lg:w-8/12">
-            <p className="text-4xl text-center">
-              <span role="img" aria-label="love">
-                😍
+              <span>リスナー達の揉め事などの防止策で待機中は基本的に雑談禁止となります。</span>
+            </details>
+            <details className="mb-4">
+              <summary className="font-semibold bg-gray-200 rounded-md py-2 px-4">
+                鳩とは？？
+              </summary>
+
+              <span>
+                鳩こと「伝書鳩行為」とは、「○○（他の配信者など）が××（配信主）のこと、こう言ってたよ」と、配信のチャット欄などで伝える行為のことであったり
+                「○○から来ました」や「○○へ行きます」などの配信者を不快にさせえうようなコメントも伝書鳩にあたるとされています。
+                ただ例外として配信の切り忘れや不遇な事態が発生した場合の鳩行為は時には配信者を救うため一概に全てが悪ではないので判断は難しいです。
+                ですが基本的にはやめましょう。
               </span>
-            </p>
-            <h3 className="font-semibold text-3xl">るしあしかかたん</h3>
-            <p className="text-blueGray-500 text-lg leading-relaxed mt-4 mb-4">
-              Cause if you do, it can be yours now. Hit the buttons below to navigate to get the
-              Free version for your next project. Build a new web app or give an old project a new
-              look!
-            </p>
-            <div className="sm:block flex flex-col mt-10">
-              <a
-                href="https://www.riml.work"
-                // target="_blank"
-                className="get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-2 bg-blueGray-400 active:bg-blueGray-500 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
-              >
-                Get started
-              </a>
-              <a
-                href="https://www.riml.work"
-                // target="_blank"
-                className="github-star sm:ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-blueGray-700 active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg"
-              >
-                <i className="fab fa-github text-lg mr-1"></i>
-                <span>Help With a Star</span>
-              </a>
-            </div>
-            <div className="text-center mt-16"></div>
+            </details>
+            <details className="mb-4">
+              <summary className="font-semibold  bg-gray-200 rounded-md py-2 px-4">
+                メンバーとは、どうやって加入するのか?
+              </summary>
+
+              <span>
+                メンバーこと「メンバーシップ」とはYoutubeのチャンネルの月額課金制のサービスになっており、加入することで自らのアイコンの横にメンバーバッチというものが付与されます。
+                他にも配信者が設定しているメンバー限定用スタンプを使えたり、メンバー限定コミュニティ、メンバー限定配信を閲覧することが可能になります。
+                最近追加されたマイルストーンチャットというメンバー加入して何か月というのをコメントで送信する機能もあります。
+                メンバー限定配信やメンバー限定コミュニティでは配信者のいつもと違う姿が見れたりメンバー限定でイラストを公開したりなど多種多様な特典が得られます。
+                メンバー加入時の金額についてはiOSだといわゆるApple税といわれる通常料金にプラスで金額が掛かる仕様があったりするので加入する際はWeb版のYoutubeから加入するのをお勧めします。
+              </span>
+            </details>
+          </div>
+          <div className="w-full lg:w-1/2 px-4 py-2">
+            <details className="mb-4">
+              <summary className="font-semibold  bg-gray-200 rounded-md py-2 px-4">
+                指示厨/ワザップとは？
+              </summary>
+
+              <span className="px-4 py-2">
+                指示厨とは、コメントにおいてああしろこうしろと動画内でのアクションに対してレスポンスを求めるコメントを書き込むユーザーへの蔑称、レッテルの一種。
+                配信者は命令を聴くロボットではありません。人だし心もあります。常識の範囲内でコメントをするようにしましょう。
+                <br />
+                ワザップ!は株式会社エムフロの子会社である株式会社イーストビームが企画・運営を行っているゲーム情報の総合ポータルサイトで
+                誰でも自由に書き込めるユーザー投稿型の情報サイトのため、インターネット黎明期には、裏技や攻略情報の意見交換の場としてゲームユーザーに親しまれていました。
+                ですがユーザーが自由に書き込めるため、嘘の情報も含まれているのでそこで得る情報には注意が必要です。
+                そこで勃発した間違った情報や偽の裏技などに騙され、感情的で幼稚な煽り文句が投稿されることがあり、かの有名な
+                <br />
+                「あなたを詐欺罪と器物損壊罪で訴えます！理由はもちろんお分かりですね？あなたが皆をこんなウラ技で騙し、セーブデータを破壊したからです！覚悟の準備をしておいて下さい。ちかいうちに訴えます。裁判も起こします。裁判所にも問答無用できてもらいます。慰謝料の準備もしておいて下さい！貴方は犯罪者です！刑務所にぶち込まれる楽しみにしておいて下さい！いいですね！」
+                <br />
+                という名言が生まれました。
+                しばしばネット界隈でネタにされておりワザップといえば「嘘の情報」という言葉の概念を持つようになり、よく嘘の情報が飛び交うことで「それはワザップ」などと言われるようになりました。
+              </span>
+            </details>
+            <details className="mb-4">
+              <summary className="font-semibold  bg-gray-200 rounded-md py-2 px-4">
+                スパチャとは？
+              </summary>
+
+              <span className="px-4 py-2">
+                スパチャこと「スーパーチャット」とはYouTubeのライブチャットや動画の公開時に、チャット欄で自分のメッセージを目立たせるための権利を購入する機能。ギフティング機能の一種である投げ銭です。
+                よく誕生日やメンバー記念日、楽しんだお礼や驚かせるためなどのお返しとしてよく使われています。
+                ですが人によっては義務化したり、後先考えず大金を投げてしまうなど自らが不幸になるような使い方をする方々もいます。
+                あくまでスパチャは娯楽の一環であり配信者もスパチャを必ず読み上げないといけないなどの縛りはありません。
+                そのためスパチャが読まれなかったなどで逆上したり、はたまた配信者が大量のスパチャを読み上げるのに数時間かけ体調が悪くなってしまうというのは悪循環です。
+                あくまでこちらも倫理観を持ちリスナー、配信者共々無理をしない程度に楽しみましょう。
+              </span>
+            </details>
+            <details className="mb-4">
+              <summary className="font-semibold bg-gray-200 rounded-md py-2 px-4">
+                るしあちゃんかわいい
+              </summary>
+
+              <span className="px-4 py-2 text-5xl">わかる！！！かわいい！！すき！！！！！！！</span>
+            </details>
           </div>
         </div>
       </div>

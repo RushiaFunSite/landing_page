@@ -16,7 +16,7 @@ const GoodsSection: VFC = () => {
   return (
     <section id="GoodsSection">
       <div
-        className="min-w-screen h-screen animated fadeIn faster left-0 top-0 flex justify-center items-center inset-0 z-50 outline-none focus:outline-none bg-no-repeat bg-center bg-cover"
+        className="min-w-screen h-screen animated fadeIn faster left-0 top-0 flex justify-center items-center inset-0 z-50 outline-none focus:outline-none bg-no-repeat bg-center bg-cover mb-80"
         id="modal-id"
       >
         <div className="min-h-screen flex flex-col items-center justify-center ">
