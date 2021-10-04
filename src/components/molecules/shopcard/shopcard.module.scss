@@ -1,0 +1,15 @@
+.CardContainer {
+  @apply flex flex-col;
+  &__Frame {
+    @apply bg-white shadow-md  rounded-3xl p-4;
+    &__Flex {
+      @apply flex-none lg:flex;
+      &__ImageContainer {
+        @apply h-full w-full lg:h-48 lg:w-48 lg:mb-0 mb-3;
+      }
+      &__DetailContainer {
+        @apply flex-auto ml-5 justify-evenly py-2;
+      }
+    }
+  }
+}
