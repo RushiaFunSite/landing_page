@@ -1,7 +1,18 @@
 import React, { VFC } from 'react';
+import { useRouter } from 'next/router';
+import * as gtag from '@/lib/gtag';
 import ShopCard from '../molecules/shopcard/ShopCard';
 
 const GoodsSection: VFC = () => {
+  const router = useRouter();
+  const toShop = (href: string) => {
+    gtag.event({
+      action: 'submit_form',
+      category: 'contact',
+      label: { toShop: href },
+    });
+    router.push(href);
+  };
   return (
     <section id="GoodsSection">
       <div
@@ -23,12 +34,14 @@ const GoodsSection: VFC = () => {
               shopImage="booth"
               shopName="Booth"
               shopLinkText="https://hololive.booth.pm/"
+              onClick={() => toShop('https://hololive.booth.pm/')}
             />
             <ShopCard
               shopCategory="公式"
               shopImage="hololivestore"
               shopName="ホロライブ公式ショップ"
               shopLinkText="https://shop.hololivepro.com/"
+              onClick={() => toShop('https://shop.hololivepro.com/')}
             />
           </div>
         </div>
