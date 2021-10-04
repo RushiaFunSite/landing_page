@@ -1,6 +1,6 @@
 import React, { VFC } from 'react';
 import { useRouter } from 'next/router';
-import * as gtag from '@/lib/gtag';
+import * as gtag from '../../lib/gtag';
 import ShopCard from '../molecules/shopcard/ShopCard';
 
 const GoodsSection: VFC = () => {
