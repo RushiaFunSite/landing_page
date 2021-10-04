@@ -1,5 +1,3 @@
-/* eslint-disable @next/next/link-passhref */
-/* eslint-disable @next/next/no-img-element */
 import React, { VFC } from 'react';
 import ShopCard from '../molecules/shopcard/ShopCard';
 
@@ -7,7 +5,6 @@ const GoodsSection: VFC = () => {
   return (
     <section id="GoodsSection">
       <div
-        // fixed
         className="min-w-screen h-screen animated fadeIn faster left-0 top-0 flex justify-center items-center inset-0 z-50 outline-none focus:outline-none bg-no-repeat bg-center bg-cover"
         id="modal-id"
       >
@@ -23,13 +20,13 @@ const GoodsSection: VFC = () => {
           <div className="grid mt-8 mb-8 gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-2">
             <ShopCard
               shopCategory="公式"
-              shopImage="/booth.PNG"
+              shopImage="booth"
               shopName="Booth"
               shopLinkText="https://hololive.booth.pm/"
             />
             <ShopCard
               shopCategory="公式"
-              shopImage="/hololivestore.PNG"
+              shopImage="hololivestore"
               shopName="ホロライブ公式ショップ"
               shopLinkText="https://shop.hololivepro.com/"
             />

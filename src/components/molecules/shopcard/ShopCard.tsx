@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import { VFC } from 'react';
 import Styles from './shopcard.module.scss';
 import { VscLink } from 'react-icons/vsc';
@@ -12,16 +11,19 @@ type ShopCardProps = {
 };
 
 const ShopCard: VFC<ShopCardProps> = (props) => {
+  const image = (): string => {
+    if (props.shopImage === 'booth') {
+      return Styles.boothImage;
+    } else {
+      return Styles.holoStoreImage;
+    }
+  };
   return (
     <div className={Styles.CardContainer}>
       <div className={Styles.CardContainer__Frame}>
         <div className={Styles.CardContainer__Frame__Flex}>
           <div className={Styles.CardContainer__Frame__Flex__ImageContainer}>
-            <img
-              src={props.shopImage}
-              alt={props.shopName}
-              className="w-full object-scale-down lg:object-cover lg:h-48 rounded-2xl"
-            />
+            <div className={image()}></div>
           </div>
           <div className={Styles.CardContainer__Frame__Flex__DetailContainer}>
             <div className="flex flex-wrap ">

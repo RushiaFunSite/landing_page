@@ -13,3 +13,25 @@
     }
   }
 }
+
+.boothImage {
+  @apply w-full object-scale-down lg:object-cover lg:h-48 rounded-2xl;
+  // image設定
+  background-image: url('../../../../public/booth.PNG');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 100%;
+  min-height: 192px;
+}
+
+.holoStoreImage {
+  @apply w-full object-scale-down lg:object-cover lg:h-48 rounded-2xl;
+  // image設定
+  background-image: url('../../../../public/hololivestore.PNG');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 100%;
+  min-height: 192px;
+}
