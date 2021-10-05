@@ -1,7 +1,7 @@
 import React, { VFC } from 'react';
 import Styles from './shopcard.module.scss';
 import { VscLink } from 'react-icons/vsc';
-import { Button } from '@/components/atoms/buttons/Button';
+import { Button } from '../../../components/atoms/buttons/Button';
 
 type ShopCardProps = {
   shopImage: string;
