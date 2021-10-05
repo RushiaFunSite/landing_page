@@ -82,6 +82,6 @@ VSCodeではESint、Prettierのアドオンを導入しているとプロジェ�
 ## Learn More
 
 Storybook  
-[コンポーネントショーケース](https://6156d7f3f08a48003a031d56-crioseuogd.chromatic.com/?path=/story/example-introduction--page)
+[コンポーネントショーケース](https://6156d7f3f08a48003a031d56-aagfaqfnyn.chromatic.com/?path=/story/example-introduction--page)
 
 記載中
