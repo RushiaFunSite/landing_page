@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import { Button } from '../atoms/buttons/Button';
 import YoutubeCard from '../molecules/youtubecard/YoutubeCard';
 import Styles from './aboutsection.module.scss';
-import * as gtag from '@/lib/gtag';
+import * as gtag from '../../lib/gtag';
 import AnchorLinkLabel from '../atoms/linkLabels/anchorLinkLabel';
 
 const AboutSection: VFC = () => {
