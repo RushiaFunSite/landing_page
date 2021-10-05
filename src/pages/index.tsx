@@ -9,8 +9,7 @@ import useScroll from '@/hooks/useScroll';
 
 const Home: NextPage = () => {
   const { isHeaderActive } = useScroll(900);
-  // TODO: デプロイ先のフルリンクをのちに設定
-  var url = 'http://localhost:3000/console.gif';
+  var url = 'https://www.uruharushia.work/console.gif';
   console.log(
     '%cなにみてるのです？',
     'color:red; font-size:20px; padding: 10px; background: black; border-radius: 5px;',
