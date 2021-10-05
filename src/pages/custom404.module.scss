@@ -1,5 +1,8 @@
 .error_bg {
   background-image: url('../../public/404.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .tracking_tighter_less {
   letter-spacing: -0.05rem;

@@ -1,9 +1,24 @@
+import { VFC } from 'react';
+import { useRouter } from 'next/router';
+import { Button } from '../components/atoms/buttons/Button';
+import * as gtag from '../lib/gtag';
 import styles from './custom404.module.scss';
-const Custom404 = () => {
+
+const Custom404: VFC = () => {
+  const router = useRouter();
+  const toHome = () => {
+    gtag.event({
+      action: 'submit_form',
+      category: 'contact',
+      label: { toHome: '404からホームへ遷移' },
+    });
+
+    router.push('/');
+  };
   return (
     <div
       className={[
-        'flex items-center justify-center min-h-screen bg-indigo-500  bg-fixed bg-cover bg-right text-red-600',
+        'flex items-center justify-center min-h-screen bg-fixed bg-cover bg-right text-gray-800',
         styles.error_bg,
       ].join(' ')}
     >
@@ -20,13 +35,7 @@ const Custom404 = () => {
           <p className={['mt-5 mb-8 font-bold', styles.text_shadow].join(' ')}>
             申し訳ございません。ページが存在していません。
           </p>
-
-          <button
-            data-test-id="topPage"
-            className="px-4 inline py-2 text-sm font-medium leading-5 shadow text-white transition-colors duration-150 border border-transparent rounded-lg focus:outline-none focus:shadow-outline-blue bg-blue-600 active:bg-blue-600 hover:bg-blue-700"
-          >
-            トップページへ戻る
-          </button>
+          <Button primary={true} label="トップページへ戻る" onClick={toHome} />
         </div>
         <div className="max-w-lg"></div>
       </div>
