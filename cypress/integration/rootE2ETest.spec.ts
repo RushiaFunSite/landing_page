@@ -5,6 +5,12 @@ it('メインセクションに内容が含まれているか', () => {
   cy.contains('UruhaRushia');
   cy.contains('fanSite!');
 });
+it('紹介セクションに内容が含まれているか', () => {
+  cy.contains('潤羽るしあとは');
+  cy.contains('関連キーワード');
+  cy.contains('おすすめ配信');
+  cy.contains('誠意制作中！');
+});
 it('グッズセクションに内容が含まれているか', () => {
   cy.contains('グッズ紹介');
   cy.contains('公式');
