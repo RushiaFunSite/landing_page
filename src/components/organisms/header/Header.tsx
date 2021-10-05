@@ -164,6 +164,7 @@ const Header: VFC<headerProps> = (props) => {
                   <HeaderLinkLabel href="#AboutSection" label="潤羽るしあとは" />
                   <HeaderLinkLabel href="#GoodsSection" label="グッズ紹介" />
                   <HeaderLinkLabel href="#FAQSection" label="Q & A" />
+                  <HeaderLinkLabel href="/termsOfUse" label="利用規約" />
                 </Popover.Group>
               </div>
             </div>
@@ -216,6 +217,7 @@ const Header: VFC<headerProps> = (props) => {
                       <HeaderLinkLabel href="#AboutSection" label="潤羽るしあとは" />
                       <HeaderLinkLabel href="#GoodsSection" label="グッズ紹介" />
                       <HeaderLinkLabel href="#FAQSection" label="Q & A" />
+                      <HeaderLinkLabel href="/termsOfUse" label="利用規約" />
                     </div>
                   </div>
                 </div>
