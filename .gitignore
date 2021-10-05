@@ -25,6 +25,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # local env files
+.env
 .env.local
 .env.development.local
 .env.test.local
@@ -32,3 +33,16 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# cypress
+cypress/screenshots
+cypress/videos
+
+# storybook
+build-storybook.log
+
+# workbox/sw
+
+/public/sw*
+/public/workbox*
+/public/fallback*

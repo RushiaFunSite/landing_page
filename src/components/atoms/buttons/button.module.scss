@@ -1,0 +1,18 @@
+.storybook_button {
+  @apply rounded-full font-bold;
+  &__primary {
+    @apply text-white bg-green-400 hover:bg-green-200;
+  }
+  &__secondary {
+    @apply text-gray-600 bg-transparent shadow-inner hover:bg-gray-600;
+  }
+  &__small {
+    @apply py-1.5 px-4 text-xs;
+  }
+  &__medium {
+    @apply py-2 px-5 text-sm;
+  }
+  &__large {
+    @apply py-3 px-6 text-base;
+  }
+}

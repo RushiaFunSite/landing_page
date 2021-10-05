@@ -6,8 +6,9 @@ const config: Config.InitialOptions = {
     '^.+\\.(ts|tsx)$': 'ts-jest',
   },
   moduleNameMapper: {
-    '@/(.+)': '<rootDir>/$1',
+    '@/(.+)': '<rootDir>/src/$1',
   },
+  testPathIgnorePatterns: ['<rootDir>/cypress/'],
 };
 
 export default config;
