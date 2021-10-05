@@ -1,191 +1,108 @@
-/* eslint-disable @next/next/no-img-element */
 import React, { VFC } from 'react';
+import { useRouter } from 'next/router';
+import { Button } from '../atoms/buttons/Button';
+import YoutubeCard from '../molecules/youtubecard/YoutubeCard';
+import Styles from './aboutsection.module.scss';
+import * as gtag from '@/lib/gtag';
+import AnchorLinkLabel from '../atoms/linkLabels/anchorLinkLabel';
 
 const AboutSection: VFC = () => {
+  const router = useRouter();
+  const toYoutube = () => {
+    gtag.event({
+      action: 'submit_form',
+      category: 'contact',
+      label: { toYoutube: 'Youtubeへ遷移' },
+    });
+
+    router.push('https://www.youtube.com/channel/UCl_gCybOJRIgOXw6Qb4qJzQ');
+  };
+  const toCoverProfilePage = () => {
+    gtag.event({
+      action: 'submit_form',
+      category: 'contact',
+      label: { toCoverProfilePage: 'ホロライブのプロフィールページへ遷移' },
+    });
+
+    router.push('https://hololive.hololivepro.com/talents/uruha-rushia/');
+  };
   return (
     <section id="AboutSection" className="mt-48 md:mt-40 pb-40 relative bg-blueGray-100">
-      <div
-        className="-mt-20 top-0 bottom-auto left-0 right-0 w-full absolute h-20"
-        style={{ transform: 'translateZ(0)' }}
-      >
-        <svg
-          className="absolute bottom-0 overflow-hidden"
-          xmlns="http://www.w3.org/2000/svg"
-          preserveAspectRatio="none"
-          version="1.1"
-          viewBox="0 0 2560 100"
-          x="0"
-          y="0"
-        >
-          <polygon
-            className="text-blueGray-100 fill-current"
-            points="2560 0 2560 100 0 100"
-          ></polygon>
-        </svg>
-      </div>
-      <div className="container mx-auto">
-        <div className="flex flex-wrap items-center">
-          <div className="w-10/12 md:w-6/12 lg:w-4/12 px-12 md:px-4 mr-auto ml-auto -mt-32">
-            <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-blueGray-700">
-              <img alt="..." src="/rushia_gif.gif" className="w-full align-middle rounded-t-lg" />
-              <blockquote className="relative p-8 mb-4">
-                <svg
-                  preserveAspectRatio="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 583 95"
-                  className="absolute left-0 w-full block h-95-px -top-94-px"
-                >
-                  <polygon
-                    points="-30,95 583,95 583,65"
-                    className="text-blueGray-700 fill-current"
-                  ></polygon>
-                </svg>
-                <h4 className="text-xl font-bold text-white">About</h4>
-                <p className="text-md font-light mt-2 text-white">
-                  Putting together a page has never been easier than matching together pre-made
-                  components. From landing pages presentation to login areas, you can easily
-                  customise and built your pages.
-                </p>
-              </blockquote>
-            </div>
-          </div>
-
-          <div className="w-full md:w-6/12 px-4">
-            <div className="flex flex-wrap">
-              <div className="w-full md:w-6/12 px-4">
-                <div className="relative flex flex-col mt-4">
-                  <div className="px-4 py-5 flex-auto">
-                    <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
-                      <i className="fas fa-sitemap"></i>
-                    </div>
-                    <h6 className="text-xl mb-1 font-semibold">CSS Components</h6>
-                    <p className="mb-4 text-blueGray-500">
-                      Notus NextJS comes with a huge number of Fully Coded CSS components.
-                    </p>
-                  </div>
-                </div>
-                <div className="relative flex flex-col min-w-0">
-                  <div className="px-4 py-5 flex-auto">
-                    <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
-                      <i className="fas fa-drafting-compass"></i>
-                    </div>
-                    <h6 className="text-xl mb-1 font-semibold">JavaScript Components</h6>
-                    <p className="mb-4 text-blueGray-500">
-                      We also feature many dynamic components for React, NextJS, Vue and Angular.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="w-full md:w-6/12 px-4">
-                <div className="relative flex flex-col min-w-0 mt-4">
-                  <div className="px-4 py-5 flex-auto">
-                    <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
-                      <i className="fas fa-newspaper"></i>
-                    </div>
-                    <h6 className="text-xl mb-1 font-semibold">Pages</h6>
-                    <p className="mb-4 text-blueGray-500">
-                      This extension also comes with 3 sample pages. They are fully coded so you can
-                      start working instantly.
-                    </p>
-                  </div>
-                </div>
-                <div className="relative flex flex-col min-w-0">
-                  <div className="px-4 py-5 flex-auto">
-                    <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
-                      <i className="fas fa-file-alt"></i>
-                    </div>
-                    <h6 className="text-xl mb-1 font-semibold">Documentation</h6>
-                    <p className="mb-4 text-blueGray-500">
-                      Built by developers for developers. You will love how easy is to to work with
-                      Notus NextJS.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <div className="container mx-auto overflow-hidden pb-20">
         <div className="flex flex-wrap items-center">
-          <div className="w-full md:w-4/12 px-12 md:px-4 ml-auto mr-auto mt-48">
-            <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
-              <i className="fas fa-sitemap text-xl"></i>
+          <div className="w-full md:w-5/12 px-4 mr-auto ml-auto">
+            <div className="relative flex flex-col min-w-0 w-full mb-6 mt-48 md:mt-0">
+              <div className={Styles.avaterImage}></div>
             </div>
-            <h3 className="text-3xl mb-2 font-semibold leading-normal">CSS Components</h3>
+          </div>
+          <div className="w-full md:w-4/12 px-12 md:px-4 ml-auto mr-auto mt-48">
+            {/* 潤羽るしあとは */}
+            <h3 className="text-3xl mb-2 font-semibold leading-normal">潤羽るしあとは</h3>
             <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-600">
-              Every element that you need in a product comes built in as a component. All components
-              fit perfectly with each other and can have different colours.
+              ホロライブプロダクション所属のバーチャルYouTuber。
+            </p>
+            <p className="text-lg font-light leading-relaxed text-blueGray-600">
+              ホロライブ3期生。清楚担当。
+            </p>
+            <p className="text-lg font-light leading-relaxed text-blueGray-600">
+              すごくファン思いでゲーム中でも積極的にコメントを拾いにいったり、
+              ファンを癒すために激甘やかしASMR配信や朝活で料理配信を行い彼女目線で話しかけてくれるなどサービス精神満点な配信を行う。
+              他にもスパチャも値段関係なく丁寧に読み上げてくれるのも特徴。
+            </p>
+            <p className="text-lg font-light leading-relaxed text-blueGray-600">
+              メンヘラ属性があり「親しい相手、リスナーの浮気を許さない」というヤンデレ系の発言をすることもある。
+              包丁がメインウェポンだったが桐生ココから受け継いだドスが現在のメインウェポン。
             </p>
             <div className="block pb-6">
+              <p className="mt-4">関連キーワード</p>
               <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
-                Buttons
+                <AnchorLinkLabel label="ホロライブプロダクション" href="https://www.hololive.tv/" />
               </span>
               <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
-                Inputs
+                <AnchorLinkLabel
+                  label="バーチャルYouTuber"
+                  href="https://ja.wikipedia.org/wiki/%E3%83%90%E3%83%BC%E3%83%81%E3%83%A3%E3%83%ABYouTuber"
+                />
               </span>
               <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
-                Labels
+                <AnchorLinkLabel
+                  label="ホロライブ3期生"
+                  href="https://ja.wikipedia.org/wiki/%E3%83%9B%E3%83%AD%E3%83%A9%E3%82%A4%E3%83%96%E3%83%97%E3%83%AD%E3%83%80%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3#%E3%83%9B%E3%83%AD%E3%83%A9%E3%82%A4%E3%83%963%E6%9C%9F%E7%94%9F"
+                />
               </span>
               <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
-                Menus
+                <AnchorLinkLabel label="ASMR" href="https://ja.wikipedia.org/wiki/ASMR" />
               </span>
               <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
-                Navbars
+                <AnchorLinkLabel
+                  label="スパチャ"
+                  href="https://ja.wikipedia.org/wiki/%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%83%81%E3%83%A3%E3%83%83%E3%83%88"
+                />
               </span>
               <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
-                Pagination
+                <AnchorLinkLabel
+                  label="ヤンデレ属性"
+                  href="https://ja.wikipedia.org/wiki/%E3%83%A4%E3%83%B3%E3%83%87%E3%83%AC"
+                />
               </span>
               <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
-                Progressbars
+                <AnchorLinkLabel
+                  label="桐生ココ"
+                  href="https://www.youtube.com/channel/UCS9uQI-jC3DE0L4IpXyvr6w"
+                />
               </span>
               <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
-                Typography
+                <AnchorLinkLabel
+                  label="受け継がれしドス"
+                  href="https://www.youtube.com/watch?v=pcu1e6VF-jQ"
+                />
               </span>
             </div>
-            <a
-              href="https://www.riml.work"
-              // target="_blank"
-              className="font-bold text-blueGray-700 hover:text-blueGray-500 ease-linear transition-all duration-150"
-            >
-              View All <i className="fa fa-angle-double-right ml-1 leading-relaxed"></i>
-            </a>
-          </div>
-
-          <div className="w-full md:w-5/12 px-4 mr-auto ml-auto mt-32">
-            <div className="relative flex flex-col min-w-0 w-full mb-6 mt-48 md:mt-0">
-              <img
-                alt="..."
-                src="/rushia_gif.gif"
-                className="w-full align-middle rounded absolute shadow-lg max-w-100-px left-145-px -top-29-px z-3"
-              />
-              <img
-                alt="..."
-                src="/rushia_gif.gif"
-                className="w-full align-middle rounded-lg absolute shadow-lg max-w-210-px left-260-px -top-160-px"
-              />
-              <img
-                alt="..."
-                src="/rushia_gif.gif"
-                className="w-full align-middle rounded-lg absolute shadow-lg max-w-180-px left-40-px -top-225-px z-2"
-              />
-              <img
-                alt="..."
-                src="/rushia_gif.gif"
-                className="w-full align-middle rounded-lg absolute shadow-2xl max-w-200-px -left-50-px top-25-px"
-              />
-              <img
-                alt="..."
-                src="/rushia_gif.gif"
-                className="w-full align-middle rounded absolute shadow-lg max-w-580-px -left-20-px top-210-px"
-              />
-              <img
-                alt="..."
-                src="/rushia_gif.gif"
-                className="w-full align-middle rounded absolute shadow-xl max-w-120-px left-195-px top-95-px"
-              />
-            </div>
+            <Button
+              primary={true}
+              label="潤羽るしあの公式プロフィールへ"
+              onClick={toCoverProfilePage}
+            />
           </div>
         </div>
 
@@ -193,150 +110,70 @@ const AboutSection: VFC = () => {
           <div className="w-full md:w-6/12 px-4 mr-auto ml-auto mt-32">
             <div className="justify-center flex flex-wrap relative">
               <div className="my-4 w-full lg:w-6/12 px-4">
-                <a
-                  href="https://www.riml.work"
-                  // target="_blank"
-                >
-                  <div className="bg-red-600 shadow-lg rounded-lg text-center p-8">
-                    <img
-                      alt="..."
-                      className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
-                      src="/rushia_gif.gif"
-                    />
-                    <p className="text-lg text-white mt-4 font-semibold">Svelte</p>
-                  </div>
-                </a>
-                <a
-                  href="https://www.riml.work"
-                  // target="_blank"
-                >
-                  <div className="bg-lightBlue-500 shadow-lg rounded-lg text-center p-8 mt-8">
-                    <img
-                      alt="..."
-                      className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
-                      src="/rushia_gif.gif"
-                    />
-                    <p className="text-lg text-white mt-4 font-semibold">ReactJS</p>
-                  </div>
-                </a>
-                <a
-                  href="https://www.riml.work"
-                  // target="_blank"
-                >
-                  <div className="bg-blueGray-700 shadow-lg rounded-lg text-center p-8 mt-8">
-                    <img
-                      alt="..."
-                      className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
-                      src="/rushia_gif.gif"
-                    />
-                    <p className="text-lg text-white mt-4 font-semibold">NextJS</p>
-                  </div>
-                </a>
+                <YoutubeCard
+                  title="睡眠導入"
+                  link="https://www.youtube-nocookie.com/embed/Tc8AlL27G7A"
+                />
+                <YoutubeCard
+                  title="オリ曲「アイリス。」"
+                  link="https://www.youtube-nocookie.com/embed/NtRpDpfE69Y"
+                />
+                <YoutubeCard
+                  title="朝活"
+                  link="https://www.youtube-nocookie.com/embed/D7LdSkdIjBw"
+                />
               </div>
               <div className="my-4 w-full lg:w-6/12 px-4 lg:mt-16">
-                <a
-                  href="https://www.riml.work"
-                  // target="_blank"
-                >
-                  <div className="bg-yellow-500 shadow-lg rounded-lg text-center p-8">
-                    <img
-                      alt="..."
-                      className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
-                      src="/rushia_gif.gif"
-                    />
-                    <p className="text-lg text-white mt-4 font-semibold">JavaScript</p>
-                  </div>
-                </a>
-                <a
-                  href="https://www.riml.work"
-                  // target="_blank"
-                >
-                  <div className="bg-red-700 shadow-lg rounded-lg text-center p-8 mt-8">
-                    <img
-                      alt="..."
-                      className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
-                      src="/rushia_gif.gif"
-                    />
-                    <p className="text-lg text-white mt-4 font-semibold">Angular</p>
-                  </div>
-                </a>
-                <a
-                  href="https://www.riml.work"
-                  // target="_blank"
-                >
-                  <div className="bg-emerald-500 shadow-lg rounded-lg text-center p-8 mt-8">
-                    <img
-                      alt="..."
-                      className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
-                      src="/rushia_gif.gif"
-                    />
-                    <p className="text-lg text-white mt-4 font-semibold">Vue.js</p>
-                  </div>
-                </a>
+                <YoutubeCard
+                  title="#潤羽るしあ2周年記念"
+                  link="https://www.youtube-nocookie.com/embed/ZE8gTiKBjA8"
+                />
+                <YoutubeCard
+                  title="FallGuys配信"
+                  link="https://www.youtube-nocookie.com/embed/flThlORUle0"
+                />
+                <YoutubeCard
+                  title="潤羽るしあ初配信"
+                  link="https://www.youtube-nocookie.com/embed/xqsOegkgDAc"
+                />
               </div>
             </div>
           </div>
 
           <div className="w-full md:w-4/12 px-12 md:px-4 ml-auto mr-auto mt-48">
-            <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
-              <i className="fas fa-drafting-compass text-xl"></i>
-            </div>
-            <h3 className="text-3xl mb-2 font-semibold leading-normal">Javascript Components</h3>
-            <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-600">
-              In order to create a great User Experience some components require JavaScript. In this
-              way you can manipulate the elements on the page and give more options to your users.
+            <h3 className="text-3xl mb-2 font-semibold leading-normal">おすすめ配信</h3>
+            <p className="text-lg font-light leading-relaxed mt-4 mb-2 text-blueGray-600">
+              睡眠導入などのASMR配信はすごく甘々で癒されますが朝活でのふにゃふにゃな姿もとてもかわいいです。
             </p>
-            <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-600">
-              We created a set of Components that are dynamic and come to help you.
+            <p className="text-lg font-light leading-relaxed mb-2 text-blueGray-600">
+              オリジナル楽曲も出しており、なんと作詞が潤羽るしあ本人によるものになっています。
             </p>
-            <div className="block pb-6">
-              <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
-                Alerts
-              </span>
-              <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
-                Dropdowns
-              </span>
-              <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
-                Menus
-              </span>
-              <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
-                Modals
-              </span>
-              <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
-                Navbars
-              </span>
-              <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
-                Popovers
-              </span>
-              <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
-                Tabs
-              </span>
-              <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
-                Tooltips
-              </span>
-            </div>
-            <a
-              href="https://www.riml.work"
-              // target="_blank"
-              className="font-bold text-blueGray-700 hover:text-blueGray-500 ease-linear transition-all duration-150"
-            >
-              View all <i className="fa fa-angle-double-right ml-1 leading-relaxed"></i>
-            </a>
+            <p className="text-lg font-light leading-relaxed mb-2 text-blueGray-600">
+              他にもたくさん配信を行っておりますがASMRとはまた違った姿を見せてくれることがあります。
+              それがゲーム配信です。
+            </p>
+            <p className="text-lg font-light leading-relaxed mb-2 text-blueGray-600">
+              彼女はリスナーを癒すため、活動に常に全力で取り組んでいますがゲームでも同じです。
+              ASMRなどとは一転、本気になるあまり大声を出したり攻撃的になったりとものすごいギャップがあります。
+              本人曰く「ゲームのキャラクターに乗っ取られている」とのことです。
+              こういったギャップもすごく見どころになっています。
+            </p>
+            <Button primary={true} label="潤羽るしあのYoutubeへ" onClick={toYoutube} />
           </div>
         </div>
       </div>
 
-      <div className="container mx-auto px-4 pb-32 pt-48">
+      <div id="ComingSoon" className="container mx-auto px-4 pb-32 pt-48">
         <div className="items-center flex flex-wrap">
           <div className="w-full md:w-5/12 ml-auto px-12 md:px-4">
             <div className="md:pr-12">
-              <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
-                <i className="fas fa-file-alt text-xl"></i>
-              </div>
-              <h3 className="text-3xl font-semibold">Complex Documentation</h3>
+              <h3 className="text-3xl font-semibold">誠意制作中！</h3>
               <p className="mt-4 text-lg leading-relaxed text-blueGray-500">
-                るしあかわいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいい！！
-                ホロはいいぞ！！！！！！！！！！ るしあの配信みたくなってきた
+                るしあちゃんの可愛さを広めるためWebアプリケーションを制作中です！
+                当サイトもるしあちゃんを広めるため作成いたしました！
+                以下のアプリの製作をお手伝いしてくださる方がいましたら気軽に
+                <AnchorLinkLabel label="Riml" href="https://twitter.com/Fande4d" />
+                まで連絡お願いします！
               </p>
               <ul className="list-none mt-6">
                 <li className="py-2">
@@ -347,7 +184,7 @@ const AboutSection: VFC = () => {
                       </span>
                     </div>
                     <div>
-                      <h4 className="text-blueGray-500">Built by Developers for Developers</h4>
+                      <h4 className="text-blueGray-500">るしあちゃんクイズ</h4>
                     </div>
                   </div>
                 </li>
@@ -359,7 +196,7 @@ const AboutSection: VFC = () => {
                       </span>
                     </div>
                     <div>
-                      <h4 className="text-blueGray-500">Carefully crafted code for Components</h4>
+                      <h4 className="text-blueGray-500">るしあちゃんボタン</h4>
                     </div>
                   </div>
                 </li>
@@ -371,7 +208,7 @@ const AboutSection: VFC = () => {
                       </span>
                     </div>
                     <div>
-                      <h4 className="text-blueGray-500">Dynamic Javascript Components</h4>
+                      <h4 className="text-blueGray-500">るしあちゃんなでなで</h4>
                     </div>
                   </div>
                 </li>
@@ -380,26 +217,8 @@ const AboutSection: VFC = () => {
           </div>
 
           <div className="w-full md:w-6/12 mr-auto px-4 pt-24 md:pt-0">
-            <img
-              alt="..."
-              className="max-w-full rounded-lg shadow-xl"
-              style={{
-                transform:
-                  'scale(1) perspective(1040px) rotateY(-11deg) rotateX(2deg) rotate(2deg)',
-              }}
-              src="/rushia_gif.gif"
-            />
+            <div className={Styles.comingSoonImage}></div>
           </div>
-        </div>
-      </div>
-
-      <div className="justify-center text-center flex flex-wrap mt-24">
-        <div className="w-full md:w-6/12 px-12 md:px-4">
-          <h2 className="font-semibold text-4xl">Beautiful Example Pages</h2>
-          <p className="text-lg leading-relaxed mt-4 mb-4 text-blueGray-500">
-            Notus NextJS is a completly new product built using our past experience in web
-            templates. Take the examples we made for you and start playing with them.
-          </p>
         </div>
       </div>
     </section>

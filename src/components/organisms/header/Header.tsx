@@ -29,19 +29,19 @@ const services: Service[] = [
   {
     name: 'クイズ',
     description: '潤羽るしあちゃんについてのクイズです。',
-    href: '/',
+    href: '#ComingSoon',
     icon: FaQuestion,
   },
   {
     name: 'るしあちゃんボタン',
     description: 'るしあちゃんボタンです。',
-    href: '/',
+    href: '#ComingSoon',
     icon: GiPlayButton,
   },
   {
     name: 'るしあちゃんなでなで',
     description: 'るしあちゃん不足でなでなでしたいときに撫でられるサービスです。',
-    href: '/',
+    href: '#ComingSoon',
     icon: RiHandHeartLine,
   },
 ];
