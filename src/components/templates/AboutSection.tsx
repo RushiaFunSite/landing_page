@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import React, { VFC } from 'react';
 import { useRouter } from 'next/router';
 import { Button } from '../atoms/buttons/Button';
@@ -99,7 +98,11 @@ const AboutSection: VFC = () => {
                 />
               </span>
             </div>
-            <Button label="潤羽るしあの公式プロフィールへ" onClick={toCoverProfilePage} />
+            <Button
+              primary={true}
+              label="潤羽るしあの公式プロフィールへ"
+              onClick={toCoverProfilePage}
+            />
           </div>
         </div>
 
@@ -155,19 +158,22 @@ const AboutSection: VFC = () => {
               本人曰く「ゲームのキャラクターに乗っ取られている」とのことです。
               こういったギャップもすごく見どころになっています。
             </p>
-            <Button label="潤羽るしあのYoutubeへ" onClick={toYoutube} />
+            <Button primary={true} label="潤羽るしあのYoutubeへ" onClick={toYoutube} />
           </div>
         </div>
       </div>
 
-      <div className="container mx-auto px-4 pb-32 pt-48">
+      <div id="ComingSoon" className="container mx-auto px-4 pb-32 pt-48">
         <div className="items-center flex flex-wrap">
           <div className="w-full md:w-5/12 ml-auto px-12 md:px-4">
             <div className="md:pr-12">
-              <h3 className="text-3xl font-semibold">Complex Documentation</h3>
+              <h3 className="text-3xl font-semibold">誠意制作中！</h3>
               <p className="mt-4 text-lg leading-relaxed text-blueGray-500">
-                るしあかわいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいい！！
-                ホロはいいぞ！！！！！！！！！！ るしあの配信みたくなってきた
+                るしあちゃんの可愛さを広めるためWebアプリケーションを制作中です！
+                当サイトもるしあちゃんを広めるため作成いたしました！
+                以下のアプリの製作をお手伝いしてくださる方がいましたら気軽に
+                <AnchorLinkLabel label="Riml" href="https://twitter.com/Fande4d" />
+                まで連絡お願いします！
               </p>
               <ul className="list-none mt-6">
                 <li className="py-2">
@@ -178,7 +184,7 @@ const AboutSection: VFC = () => {
                       </span>
                     </div>
                     <div>
-                      <h4 className="text-blueGray-500">Built by Developers for Developers</h4>
+                      <h4 className="text-blueGray-500">るしあちゃんクイズ</h4>
                     </div>
                   </div>
                 </li>
@@ -190,7 +196,7 @@ const AboutSection: VFC = () => {
                       </span>
                     </div>
                     <div>
-                      <h4 className="text-blueGray-500">Carefully crafted code for Components</h4>
+                      <h4 className="text-blueGray-500">るしあちゃんボタン</h4>
                     </div>
                   </div>
                 </li>
@@ -202,7 +208,7 @@ const AboutSection: VFC = () => {
                       </span>
                     </div>
                     <div>
-                      <h4 className="text-blueGray-500">Dynamic Javascript Components</h4>
+                      <h4 className="text-blueGray-500">るしあちゃんなでなで</h4>
                     </div>
                   </div>
                 </li>
@@ -211,26 +217,8 @@ const AboutSection: VFC = () => {
           </div>
 
           <div className="w-full md:w-6/12 mr-auto px-4 pt-24 md:pt-0">
-            <img
-              alt="..."
-              className="max-w-full rounded-lg shadow-xl"
-              style={{
-                transform:
-                  'scale(1) perspective(1040px) rotateY(-11deg) rotateX(2deg) rotate(2deg)',
-              }}
-              src="/rushia_gif.gif"
-            />
+            <div className={Styles.comingSoonImage}></div>
           </div>
-        </div>
-      </div>
-
-      <div className="justify-center text-center flex flex-wrap mt-24">
-        <div className="w-full md:w-6/12 px-12 md:px-4">
-          <h2 className="font-semibold text-4xl">Beautiful Example Pages</h2>
-          <p className="text-lg leading-relaxed mt-4 mb-4 text-blueGray-500">
-            Notus NextJS is a completly new product built using our past experience in web
-            templates. Take the examples we made for you and start playing with them.
-          </p>
         </div>
       </div>
     </section>
