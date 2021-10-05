@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import React, { VFC } from 'react';
-// TODO: Footerを実装する
-// import Footer from '@/components/organisms/footer/Footer';
+import Footer from '../components/organisms/footer/Footer';
 
 type Props = {
   children: React.ReactNode;
@@ -17,7 +16,7 @@ const Layout: VFC<Props> = (props) => {
       <main className="flex flex-col items-center justify-center w-full flex-1">
         {props.children}
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };

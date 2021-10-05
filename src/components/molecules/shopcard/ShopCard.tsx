@@ -1,6 +1,7 @@
-import { VFC } from 'react';
+import React, { VFC } from 'react';
 import Styles from './shopcard.module.scss';
 import { VscLink } from 'react-icons/vsc';
+import { Button } from '../../../components/atoms/buttons/Button';
 
 type ShopCardProps = {
   shopImage: string;
@@ -41,14 +42,7 @@ const ShopCard: VFC<ShopCardProps> = (props) => {
             </div>
             <div className="flex p-4 pb-2 border-t border-gray-200 "></div>
             <div className="flex space-x-3 text-sm font-medium">
-              <button
-                className="mb-2 md:mb-0 bg-gray-900 px-5 py-2 shadow-sm tracking-wider text-white rounded-full hover:bg-gray-800"
-                type="button"
-                aria-label="like"
-                onClick={props.onClick}
-              >
-                ショップへ
-              </button>
+              <Button primary={true} label="ショップへ" onClick={props.onClick} />
             </div>
           </div>
         </div>

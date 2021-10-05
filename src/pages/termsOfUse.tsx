@@ -1,9 +1,21 @@
 import Layout from '@/layout/layout';
-import React from 'react';
-import Link from 'next/link';
+import React, { VFC } from 'react';
 import AnchorLinkLabel from '@/components/atoms/linkLabels/anchorLinkLabel';
+import { useRouter } from 'next/router';
+import { Button } from '../components/atoms/buttons/Button';
+import * as gtag from '../lib/gtag';
 
-const termsOfUse = () => {
+const TermsOfUse: VFC = () => {
+  const router = useRouter();
+  const toHome = () => {
+    gtag.event({
+      action: 'submit_form',
+      category: 'contact',
+      label: { toHome: '利用規約ページからホーム' },
+    });
+
+    router.push('/');
+  };
   return (
     <Layout>
       <div className="mt-10 lg:px-20 md:px-20">
@@ -203,10 +215,13 @@ const termsOfUse = () => {
               </div>
             </li>
           </ul>
+          <div className="text-center">
+            <Button primary={true} label="ホームへ戻る" onClick={toHome} />
+          </div>
         </div>
       </div>
     </Layout>
   );
 };
 
-export default termsOfUse;
+export default TermsOfUse;
