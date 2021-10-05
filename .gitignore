@@ -40,3 +40,9 @@ cypress/videos
 
 # storybook
 build-storybook.log
+
+# workbox/sw
+
+/public/sw*
+/public/workbox*
+/public/fallback*
