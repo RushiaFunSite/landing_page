@@ -17,7 +17,7 @@
 .boothImage {
   @apply w-full object-scale-down lg:object-cover lg:h-48 rounded-2xl;
   // image設定
-  background-image: url('../../../../public/booth.PNG');
+  background-image: url('../../../../public/booth.webp');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -28,7 +28,7 @@
 .holoStoreImage {
   @apply w-full object-scale-down lg:object-cover lg:h-48 rounded-2xl;
   // image設定
-  background-image: url('../../../../public/hololivestore.PNG');
+  background-image: url('../../../../public/hololivestore.webp');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
