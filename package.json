@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "next build && next export && next-sitemap --config sitemap.config.js",
     "start": "next start",
     "lint": "next lint",
     "prettier": "prettier --write .",
@@ -53,6 +53,7 @@
     "eslint-config-next": "11.1.2",
     "eslint-config-prettier": "^8.3.0",
     "jest": "^27.2.0",
+    "next-sitemap": "^1.6.179",
     "postcss": "^8.3.6",
     "prettier": "^2.4.1",
     "tailwindcss": "^2.2.15",
