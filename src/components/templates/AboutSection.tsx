@@ -219,6 +219,7 @@ const AboutSection: VFC = () => {
           <div className="w-full md:w-6/12 mr-auto px-4 pt-24 md:pt-0">
             {/* <div className={Styles.comingSoonImage}></div> */}
             <video className={Styles.comingSoonImage} autoPlay loop muted playsInline>
+              <source src="/rushia_gif.webm" type="video/webm" />
               <source src="/rushia_gif.mp4" type="video/mp4" />
             </video>
           </div>
