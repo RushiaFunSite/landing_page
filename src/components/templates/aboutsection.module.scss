@@ -24,15 +24,21 @@
   }
 }
 
+// .comingSoonImage {
+//   // layout
+//   @apply max-w-full rounded-lg shadow-xl;
+//   // image設定
+//   background-image: url('../../../public/rushia_gif.gif');
+//   max-width: 580px;
+//   height: 380px;
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   background-size: cover;
+//   transform: scale(1) perspective(1040px) rotateY(-11deg) rotateX(2deg) rotate(2deg);
+// }
+
 .comingSoonImage {
   // layout
   @apply max-w-full rounded-lg shadow-xl;
-  // image設定
-  background-image: url('../../../public/rushia_gif.gif');
-  max-width: 580px;
-  height: 380px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
   transform: scale(1) perspective(1040px) rotateY(-11deg) rotateX(2deg) rotate(2deg);
 }
