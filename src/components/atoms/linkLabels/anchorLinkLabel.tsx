@@ -9,7 +9,7 @@ type AnchorLinkLabelProps = {
 const AnchorLinkLabel = (props: AnchorLinkLabelProps) => {
   return (
     <Link href={props.href}>
-      <a className="text-green-500 hover:text-green-300">{props.label}</a>
+      <a className="text-primaryFont hover:text-primaryFontHover">{props.label}</a>
     </Link>
   );
 };

@@ -1,133 +1,146 @@
 $breakpoints: (
-  'pc': 'screen and (min-width: 761px)',
-  'sp': 'screen and (max-width: 760px)',
-  'galaxy': 'screen and (max-width: 360px)',
-  'mini': 'screen and (max-height: 667px)',
-  'iphoneplus': 'screen and (max-height: 736px)',
+    'pc': 'screen and (min-width: 761px)',
+    'sp': 'screen and (max-width: 760px)',
+    'galaxy': 'screen and (max-width: 360px)',
+    'mini': 'screen and (max-height: 667px)',
+    'iphoneplus': 'screen and (max-height: 736px)',
 ) !default;
 
 @mixin mq($breakpoint: pc) {
-  @media #{map-get($breakpoints, $breakpoint)} {
-    @content;
-  }
+    @media #{map-get( $breakpoints, $breakpoint )} {
+        @content;
+    }
 }
 
 .container {
-  @apply w-full min-h-screen bg-white flex justify-center items-center;
-  &__frame {
-    position: absolute;
-    box-sizing: border-box;
-    @include mq() {
-      top: 30px;
-      left: 30px;
-      width: calc(100% - 60px);
-      height: calc(100% - 60px);
-      border: solid 2px #77d2b8;
-      border-radius: 20px;
+    @apply w-full min-h-screen bg-white flex justify-center items-center;
+
+    &__frame {
+        box-sizing: border-box;
+        position: absolute;
+
+        @include mq() {
+            border: solid 2px #77D2B8;
+            border-radius: 20px;
+            height: calc(100% - 60px);
+            left: 30px;
+            top: 30px;
+            width: calc(100% - 60px);
+        }
+
+        @include mq(sp) {
+            border: solid 2.5px #77D2B8;
+            border-radius: 30px;
+            height: calc(100% - 20px);
+            left: 10px;
+            top: 10px;
+            width: calc(100% - 20px);
+        }
+    }
+    // Titleと画像
+    &__items {
+        // @apply flex justify-center items-center h-full;
+        position: absolute;
+        // overflow: auto;
+        @include mq() {
+            height: calc(100% - 80px);
+            left: 40px;
+            top: 80px;
+            width: calc(100% - 80px);
+        }
+
+        @include mq(sp) {
+            height: calc(100% - 80px);
+            left: 20px;
+            top: 40px;
+            width: calc(100% - 40px);
+        }
     }
 
-    @include mq(sp) {
-      top: 10px;
-      left: 10px;
-      width: calc(100% - 20px);
-      height: calc(100% - 20px);
-      border: solid 2.5px #77d2b8;
-      border-radius: 30px;
+    &__title {
+        @apply flex lg:flex-row md:flex-row flex-col justify-center items-center w-full;
+
+        &__backgroundImage {
+            // layout
+            @apply rounded-lg flex flex-col justify-center px-8;
+            // image設定
+            background-image: url('../../../public/butterfly_animation.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: auto;
+
+            @include mq() {
+                height: 400px;
+            }
+
+            @include mq(sp) {
+                height: 200px;
+            }
+        }
     }
-  }
-  // Titleと画像
-  &__items {
-    // @apply flex justify-center items-center h-full;
-    position: absolute;
-    // overflow: auto;
-    @include mq() {
-      top: 80px;
-      left: 40px;
-      width: calc(100% - 80px);
-      height: calc(100% - 80px);
-    }
-    @include mq(sp) {
-      top: 40px;
-      left: 20px;
-      width: calc(100% - 40px);
-      height: calc(100% - 80px);
-    }
-  }
-  &__title {
-    @apply flex lg:flex-row md:flex-row flex-col justify-center items-center w-full;
-    &__backgroundImage {
-      // layout
-      @apply rounded-lg flex flex-col justify-center px-8;
-      // image設定
-      background-image: url('../../../public/butterfly_animation.svg');
-      width: auto;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
-      @include mq() {
-        height: 400px;
-      }
-      @include mq(sp) {
-        height: 200px;
-      }
-    }
-  }
 }
 
 .rushiaImg {
-  // layout
-  @apply max-w-full h-auto align-middle border-none;
-  // image設定
-  background-image: url('../../../public/uruharushia.webp');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  @include mq() {
-    height: 720px;
-    width: 347px;
-  }
-  @include mq(sp) {
-    height: 600px;
-    width: 300px;
-  }
-  @include mq(mini) {
-    height: 380px;
-    width: 300px;
-  }
-  @include mq(iphoneplus) {
-    height: 450px;
-    width: 300px;
-  }
-  @include mq(galaxy) {
-    height: 350px;
-    width: 300px;
-  }
+    // layout
+    @apply max-w-full h-auto align-middle border-none;
+    // image設定
+    background-image: url('../../../public/uruharushia.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @include mq() {
+        height: 720px;
+        width: 347px;
+    }
+
+    @include mq(sp) {
+        height: 600px;
+        width: 300px;
+    }
+
+    @include mq(mini) {
+        height: 380px;
+        width: 300px;
+    }
+
+    @include mq(iphoneplus) {
+        height: 450px;
+        width: 300px;
+    }
+
+    @include mq(galaxy) {
+        height: 350px;
+        width: 300px;
+    }
 }
 
 /* animation */
 
 @keyframes typing {
-  from {
-    width: 0;
-  }
+    from {
+        width: 0;
+    }
 }
+
 @keyframes cursor {
-  50% {
-    border-right-color: currentColor;
-  }
+    50% {
+        border-right-color: currentColor;
+    }
 }
 
 .title__animation1 {
-  width: 12ch;
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typing 1s steps(20);
+    animation: typing 1s steps(20);
+    overflow: hidden;
+    white-space: nowrap;
+    width: 12ch;
 }
 
 .title__animation2 {
-  width: 7ch;
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 1px solid transparent;
-  animation: typing 1s steps(20), cursor 0.5s steps(1) infinite;
+    animation: typing 1s steps(20), cursor 0.5s steps(1) infinite;
+    border-right: 1px solid transparent;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 7ch;
 }

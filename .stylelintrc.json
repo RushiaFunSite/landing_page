@@ -1,0 +1,30 @@
+{
+  "plugins": ["stylelint-scss", "stylelint-order"],
+  "extends": ["stylelint-config-standard", "stylelint-config-recommended-scss"],
+  "rules": {
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": ["tailwind", "apply", "variants", "responsive", "screen"]
+      }
+    ],
+    "order/properties-alphabetical-order": true,
+    "indentation": 4,
+    "string-quotes": "single",
+    "no-duplicate-selectors": true,
+    "color-hex-case": "upper",
+    "selector-combinator-space-after": "always",
+    "selector-attribute-quotes": "never",
+    "declaration-block-trailing-semicolon": "always",
+    "declaration-no-important": true,
+    "declaration-colon-space-after": "always",
+    "declaration-colon-newline-after": "always-multi-line",
+    "number-leading-zero": "always",
+    "function-url-quotes": "always",
+    "comment-whitespace-inside": "always",
+    "media-feature-parentheses-space-inside": "always",
+    "media-feature-colon-space-after": "always"
+  },
+  "ignoreFiles": ["**/node_modules/**"]
+}
