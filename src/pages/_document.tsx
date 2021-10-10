@@ -17,8 +17,13 @@ class MyDocument extends Document {
   render(): JSX.Element {
     return (
       <Html lang="ja" dir="ltr">
-        <Head />
-        <body>
+        <Head>
+          <link
+            href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap"
+            rel="stylesheet"
+          ></link>
+        </Head>
+        <body className="font-comfortaa">
           <Main />
           <NextScript />
         </body>
