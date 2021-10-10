@@ -235,8 +235,8 @@ const AboutSection: VFC = () => {
               muted
               loop
             >
-              {/* <source src="/rushia_gif.webm" type="video/webm" />
-              <source src="/rushia_gif.mp4" type="video/mp4" /> */}
+              <source src="/rushia_gif.webm" type="video/webm" />
+              <source src="/rushia_gif.mp4" type="video/mp4" />
               <source src="/rushia_gif.m3u8" />
             </video>
           </div>

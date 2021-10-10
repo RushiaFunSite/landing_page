@@ -22,7 +22,7 @@ const Custom404: VFC = () => {
         styles.error_bg,
       ].join(' ')}
     >
-      <div className="container flex flex-col md:flex-row items-center justify-center px-5">
+      <div className="container flex flex-col md:flex-row justify-center items-center px-5">
         <div className="max-w-md">
           <div className={['text-5xl font-bold', styles.text_shadow].join(' ')}>404</div>
           <p

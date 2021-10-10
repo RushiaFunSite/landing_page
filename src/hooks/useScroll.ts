@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
 
 const useScroll = (activePoint: number) => {
   const [isHeaderActive, setIsHeaderActive] = useState(false);
