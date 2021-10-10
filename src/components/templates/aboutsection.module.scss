@@ -31,12 +31,7 @@
     // layout
     @apply max-w-full rounded-lg shadow-xl;
     // image設定
-    background-image: url('../../../public/rushia_gif.gif');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 380px;
-    max-width: 580px;
+    // background-image: url('../../../public/rushia_gif.gif');
     object-fit: cover;
     transform: scale(1) perspective(1040px) rotateY(-11deg) rotateX(2deg) rotate(2deg);
 }
