@@ -18,11 +18,11 @@ const TermsOfUse: VFC = () => {
   };
   return (
     <Layout>
-      <div className="mt-10 lg:px-20 md:px-20">
+      <div className="md:px-20 lg:px-20 mt-10">
         <p className="text-3xl text-center">利用規約</p>
         <div className="relative m-5">
-          <div className="border-dotted absolute h-full top-0"></div>
-          <ul className="list-none m-0 p-0">
+          <div className="absolute top-0 h-full border-dotted"></div>
+          <ul className="p-0 m-0 list-none">
             <li className="mb-2">
               <div className="flex items-center mb-1">
                 <div className="flex-1 ml-4 font-medium">利用規約について</div>
