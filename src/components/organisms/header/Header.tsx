@@ -71,19 +71,19 @@ const Header: VFC<headerProps> = (props) => {
       <Popover className="relative bg-white bg-opacity-75">
         {({ open }) => (
           <>
-            <div className="w-full mx-auto px-4 sm:px-6">
-              <div className="flex justify-between items-center py-6 md:justify-start md:space-x-10">
-                <div className="flex justify-start lg:w-0 lg:flex-1">
+            <div className="px-4 sm:px-6 mx-auto w-full">
+              <div className="flex justify-between md:justify-start items-center py-6 md:space-x-10">
+                <div className="flex lg:flex-1 justify-start lg:w-0">
                   <Link href="/">
                     <a>
                       <HeaderTitle />
                     </a>
                   </Link>
                 </div>
-                <div className="-mr-2 -my-2 md:hidden">
-                  <Popover.Button className="bg-transparent rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                <div className="md:hidden -my-2 -mr-2">
+                  <Popover.Button className="inline-flex justify-center items-center p-2 text-gray-400 hover:text-gray-500 bg-transparent hover:bg-gray-100 rounded-md focus:ring-2 focus:ring-inset focus:ring-indigo-500 focus:outline-none">
                     <span className="sr-only">Open menu</span>
-                    <VscMenu className="h-6 w-6" aria-hidden="true" />
+                    <VscMenu className="w-6 h-6" aria-hidden="true" />
                   </Popover.Button>
                 </div>
                 <Popover.Group as="nav" className="hidden md:flex space-x-10">
@@ -93,7 +93,7 @@ const Header: VFC<headerProps> = (props) => {
                         <Popover.Button
                           className={classNames(
                             open ? 'text-gray-900' : 'text-gray-500',
-                            'group bg-transparent rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-400',
+                            'group bg-transparent rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primaryItem',
                           )}
                         >
                           <span>サービス</span>
@@ -117,15 +117,15 @@ const Header: VFC<headerProps> = (props) => {
                         >
                           <Popover.Panel
                             static
-                            className="absolute -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2 z-10"
+                            className="absolute lg:left-1/2 z-10 px-2 sm:px-0 mt-3 -ml-4 lg:ml-0 w-screen max-w-md transform lg:-translate-x-1/2"
                           >
-                            <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                              <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+                            <div className="overflow-hidden rounded-lg ring-1 ring-black ring-opacity-5 shadow-lg">
+                              <div className="grid relative gap-6 sm:gap-8 sm:p-8 py-6 px-5 bg-white">
                                 {services.map((item) => (
                                   <Link key={item.name} href={item.href}>
-                                    <a className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
+                                    <a className="flex items-start p-3 -m-3 hover:bg-gray-50 rounded-lg">
                                       <item.icon
-                                        className="flex-shrink-0 h-6 w-6 text-green-400"
+                                        className="flex-shrink-0 w-6 h-6 text-primaryItem"
                                         aria-hidden="true"
                                       />
                                       <div className="ml-4">
@@ -140,13 +140,13 @@ const Header: VFC<headerProps> = (props) => {
                                   </Link>
                                 ))}
                               </div>
-                              <div className="px-5 py-5 bg-gray-50 space-y-6 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
+                              <div className="sm:flex py-5 px-5 sm:px-8 space-y-6 sm:space-y-0 sm:space-x-10 bg-gray-50">
                                 {menuAction.map((item) => (
                                   <div key={item.name} className="flow-root">
                                     <Link key={item.name} href={item.href}>
-                                      <a className="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 hover:bg-gray-100">
+                                      <a className="flex items-center p-3 -m-3 text-base font-medium text-gray-900 hover:bg-gray-100 rounded-md">
                                         <item.icon
-                                          className="flex-shrink-0 h-6 w-6 text-green-400"
+                                          className="flex-shrink-0 w-6 h-6 text-primaryItem"
                                           aria-hidden="true"
                                         />
                                         <span className="ml-3">{item.name}</span>
@@ -181,16 +181,16 @@ const Header: VFC<headerProps> = (props) => {
               <Popover.Panel
                 focus
                 static
-                className="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
+                className="md:hidden absolute inset-x-0 top-0 z-10 p-2 transition transform origin-top-right"
               >
-                <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
-                  <div className="pt-5 pb-6 px-5">
-                    <div className="flex items-center justify-between">
+                <div className="bg-white rounded-lg divide-y-2 divide-gray-50 ring-1 ring-black ring-opacity-5 shadow-lg">
+                  <div className="px-5 pt-5 pb-6">
+                    <div className="flex justify-between items-center">
                       <HeaderTitle />
                       <div className="-mr-2">
-                        <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                        <Popover.Button className="inline-flex justify-center items-center p-2 text-gray-400 hover:text-gray-500 bg-white hover:bg-gray-100 rounded-md focus:ring-2 focus:ring-inset focus:ring-indigo-500 focus:outline-none">
                           <span className="sr-only">Close menu</span>
-                          <VscClose className="h-6 w-6" aria-hidden="true" />
+                          <VscClose className="w-6 h-6" aria-hidden="true" />
                         </Popover.Button>
                       </div>
                     </div>
@@ -198,9 +198,9 @@ const Header: VFC<headerProps> = (props) => {
                       <nav className="grid gap-y-8">
                         {services.map((item) => (
                           <Link key={item.name} href={item.href}>
-                            <a className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
+                            <a className="flex items-center p-3 -m-3 hover:bg-gray-50 rounded-md">
                               <item.icon
-                                className="flex-shrink-0 h-6 w-6 text-green-400"
+                                className="flex-shrink-0 w-6 h-6 text-primaryFont"
                                 aria-hidden="true"
                               />
                               <span className="ml-3 text-base font-medium text-gray-900">
@@ -213,7 +213,7 @@ const Header: VFC<headerProps> = (props) => {
                     </div>
                   </div>
                   <div className="py-6 px-5 space-y-6">
-                    <div className="grid grid-cols-2 gap-y-4 gap-x-8">
+                    <div className="grid grid-cols-2 gap-x-8 gap-y-4">
                       <HeaderLinkLabel href="#AboutSection" label="潤羽るしあとは" />
                       <HeaderLinkLabel href="#GoodsSection" label="グッズ紹介" />
                       <HeaderLinkLabel href="#FAQSection" label="Q & A" />
