@@ -146,9 +146,9 @@ const AboutSection: VFC = () => {
           </div>
 
           <div className="px-12 md:px-4 mt-48 mr-auto ml-auto w-full md:w-4/12">
-            <h3 className="mb-2 text-2xl sm:text-3xl font-medium text-center text-gray-900">
+            <h1 className="mb-2 text-2xl sm:text-3xl font-medium text-center text-gray-900">
               おすすめ配信
-            </h3>
+            </h1>
             <p className="mt-4 mb-2 text-lg font-light leading-relaxed text-gray-600">
               睡眠導入などのASMR配信はすごく甘々で癒されますが朝活でのふにゃふにゃな姿もとてもかわいいです。
             </p>
@@ -174,12 +174,12 @@ const AboutSection: VFC = () => {
         <div className="flex flex-wrap items-center">
           <div className="px-12 md:px-4 ml-auto w-full md:w-5/12">
             <div className="md:pr-12">
-              <h3 className="text-2xl sm:text-3xl font-medium text-center text-gray-900">
+              <h1 className="text-2xl sm:text-3xl font-medium text-center text-gray-900">
                 誠意制作中！
-              </h3>
+              </h1>
               <p className="mt-4 text-lg font-light leading-relaxed text-gray-600">
                 るしあちゃんの可愛さを広めるためWebアプリケーションを制作中です！
-                当サイトもるしあちゃんを広めるため作成いたしました！
+                当サイトもるしあちゃんを広めるため作成いたしました。
                 以下のアプリの製作をお手伝いしてくださる方がいましたら気軽に
                 <AnchorLinkLabel label="Riml" href="https://twitter.com/Fande4d" />
                 まで連絡お願いします！
@@ -229,16 +229,15 @@ const AboutSection: VFC = () => {
             {/* <div className={Styles.comingSoonImage}></div> */}
             <video
               className={Styles.comingSoonImage}
-              poster="/butterfly_animation.svg"
               preload="none"
               playsInline
               autoPlay
               muted
               loop
             >
-              <source src="/rushia_gif.webm" type="video/webm" />
-              <source src="/rushia_gif.mp4" type="video/mp4" />
-              {/* <source src="/rushia_gif.m3u8" /> */}
+              {/* <source src="/rushia_gif.webm" type="video/webm" />
+              <source src="/rushia_gif.mp4" type="video/mp4" /> */}
+              <source src="/rushia_gif.m3u8" />
             </video>
           </div>
         </div>
