@@ -1,44 +1,42 @@
 .avaterImage {
-  // layout
-  @apply w-full align-middle rounded absolute;
-  // image設定
-  background-image: url('../../../public/RushiaAvator.webp');
-  left: 0;
-  top: -100px;
-  max-width: 580px;
-  height: 380px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  @media screen and (max-height: 667px) {
-    top: -210px;
-    height: 220px;
-  }
-  @media screen and (max-width: 760px) {
-    top: -210px;
-    height: 260px;
-  }
-  @media screen and (max-height: 736px) {
-    top: -210px;
-    height: 290px;
-  }
+    // layout
+    @apply w-full align-middle rounded absolute;
+    // image設定
+    background-image: url('../../../public/RushiaAvator.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 380px;
+    left: 0;
+    max-width: 580px;
+    top: -100px;
+
+    @media screen and ( max-height: 667px ) {
+        height: 220px;
+        top: -210px;
+    }
+
+    @media screen and ( max-width: 760px ) {
+        height: 260px;
+        top: -210px;
+    }
+
+    @media screen and ( max-height: 736px ) {
+        height: 290px;
+        top: -210px;
+    }
 }
 
-// .comingSoonImage {
-//   // layout
-//   @apply max-w-full rounded-lg shadow-xl;
-//   // image設定
-//   background-image: url('../../../public/rushia_gif.gif');
-//   max-width: 580px;
-//   height: 380px;
-//   background-repeat: no-repeat;
-//   background-position: center;
-//   background-size: cover;
-//   transform: scale(1) perspective(1040px) rotateY(-11deg) rotateX(2deg) rotate(2deg);
-// }
-
 .comingSoonImage {
-  // layout
-  @apply max-w-full rounded-lg shadow-xl;
-  transform: scale(1) perspective(1040px) rotateY(-11deg) rotateX(2deg) rotate(2deg);
+    // layout
+    @apply max-w-full rounded-lg shadow-xl;
+    // image設定
+    background-image: url('../../../public/rushia_gif.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 380px;
+    max-width: 580px;
+    object-fit: cover;
+    transform: scale(1) perspective(1040px) rotateY(-11deg) rotateX(2deg) rotate(2deg);
 }

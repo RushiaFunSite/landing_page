@@ -1,33 +1,34 @@
-import Link from 'next/link';
 import React, { VFC } from 'react';
 
 const FAQSection: VFC = () => {
   return (
-    <section id="FAQSection" className="bg-blueGray-200 mb-24">
-      <div className="container px-5 py-24 mx-auto">
-        <div className="text-center mb-20">
-          <h1 className="sm:text-3xl text-2xl font-medium text-center title-font text-gray-900 mb-4">
+    <section id="FAQSection">
+      <div className="container py-24 px-5 mx-auto">
+        <div className="mb-20 text-center">
+          <h1 className="mb-4 text-2xl sm:text-3xl font-medium text-center text-gray-900">
             よくあるご質問（FAQ:Frequently Asked Question）
           </h1>
-          <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
+          <p className="mx-auto lg:w-3/4 xl:w-2/4 font-light leading-relaxed">
             よくある質問や配信を楽しむためのルールを引用しています。
           </p>
         </div>
-        <div className="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
-          <div className="w-full lg:w-1/2 px-4 py-2">
+        <div className="flex flex-wrap -mx-2 sm:mx-auto sm:mb-2 lg:w-4/5">
+          <div className="py-2 px-4 w-full lg:w-1/2">
             <details className="mb-4">
-              <summary className="font-semibold  bg-gray-200 rounded-md py-2 px-4">
+              <summary className="py-2 px-4 font-semibold bg-gray-200 rounded-md">
                 待機中のルール
               </summary>
 
-              <span>リスナー達の揉め事などの防止策で待機中は基本的に雑談禁止となります。</span>
+              <span className="text-lg font-light leading-relaxed text-gray-600">
+                リスナー達の揉め事などの防止策で待機中は基本的に雑談禁止となります。
+              </span>
             </details>
             <details className="mb-4">
-              <summary className="font-semibold bg-gray-200 rounded-md py-2 px-4">
+              <summary className="py-2 px-4 font-semibold bg-gray-200 rounded-md">
                 鳩とは？？
               </summary>
 
-              <span>
+              <span className="text-lg font-light leading-relaxed text-gray-600">
                 鳩こと「伝書鳩行為」とは、「○○（他の配信者など）が××（配信主）のこと、こう言ってたよ」と、配信のチャット欄などで伝える行為のことであったり
                 「○○から来ました」や「○○へ行きます」などの配信者を不快にさせえうようなコメントも伝書鳩にあたるとされています。
                 ただ例外として配信の切り忘れや不遇な事態が発生した場合の鳩行為は時には配信者を救うため一概に全てが悪ではないので判断は難しいです。
@@ -35,11 +36,11 @@ const FAQSection: VFC = () => {
               </span>
             </details>
             <details className="mb-4">
-              <summary className="font-semibold  bg-gray-200 rounded-md py-2 px-4">
+              <summary className="py-2 px-4 font-semibold bg-gray-200 rounded-md">
                 メンバーとは、どうやって加入するのか?
               </summary>
 
-              <span>
+              <span className="text-lg font-light leading-relaxed text-gray-600">
                 メンバーこと「メンバーシップ」とはYoutubeのチャンネルの月額課金制のサービスになっており、加入することで自らのアイコンの横にメンバーバッチというものが付与されます。
                 他にも配信者が設定しているメンバー限定用スタンプを使えたり、メンバー限定コミュニティ、メンバー限定配信を閲覧することが可能になります。
                 最近追加されたマイルストーンチャットというメンバー加入して何か月というのをコメントで送信する機能もあります。
@@ -48,13 +49,13 @@ const FAQSection: VFC = () => {
               </span>
             </details>
           </div>
-          <div className="w-full lg:w-1/2 px-4 py-2">
+          <div className="py-2 px-4 w-full lg:w-1/2">
             <details className="mb-4">
-              <summary className="font-semibold  bg-gray-200 rounded-md py-2 px-4">
+              <summary className="py-2 px-4 font-semibold bg-gray-200 rounded-md">
                 指示厨/ワザップとは？
               </summary>
 
-              <span className="px-4 py-2">
+              <span className="py-2 px-4 text-lg font-light leading-relaxed text-gray-600">
                 指示厨とは、コメントにおいてああしろこうしろと動画内でのアクションに対してレスポンスを求めるコメントを書き込むユーザーへの蔑称、レッテルの一種。
                 配信者は命令を聴くロボットではありません。人だし心もあります。常識の範囲内でコメントをするようにしましょう。
                 <br />
@@ -70,11 +71,11 @@ const FAQSection: VFC = () => {
               </span>
             </details>
             <details className="mb-4">
-              <summary className="font-semibold  bg-gray-200 rounded-md py-2 px-4">
+              <summary className="py-2 px-4 font-semibold bg-gray-200 rounded-md">
                 スパチャとは？
               </summary>
 
-              <span className="px-4 py-2">
+              <span className="py-2 px-4 text-lg font-light leading-relaxed text-gray-600">
                 スパチャこと「スーパーチャット」とはYouTubeのライブチャットや動画の公開時に、チャット欄で自分のメッセージを目立たせるための権利を購入する機能。ギフティング機能の一種である投げ銭です。
                 よく誕生日やメンバー記念日、楽しんだお礼や驚かせるためなどのお返しとしてよく使われています。
                 ですが人によっては義務化したり、後先考えず大金を投げてしまうなど自らが不幸になるような使い方をする方々もいます。
@@ -84,11 +85,11 @@ const FAQSection: VFC = () => {
               </span>
             </details>
             <details className="mb-4">
-              <summary className="font-semibold bg-gray-200 rounded-md py-2 px-4">
+              <summary className="py-2 px-4 font-semibold bg-gray-200 rounded-md">
                 るしあちゃんかわいい
               </summary>
 
-              <span className="px-4 py-2 text-5xl">わかる！！！かわいい！！すき！！！！！！！</span>
+              <span className="py-2 px-4 text-5xl">わかる！！！かわいい！！すき！！！！！！！</span>
             </details>
           </div>
         </div>

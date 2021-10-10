@@ -1,37 +1,41 @@
 .CardContainer {
-  @apply flex flex-col;
-  &__Frame {
-    @apply bg-white shadow-md  rounded-3xl p-4;
-    &__Flex {
-      @apply flex-none lg:flex;
-      &__ImageContainer {
-        @apply h-full w-full lg:h-48 lg:w-48 lg:mb-0 mb-3;
-      }
-      &__DetailContainer {
-        @apply flex-auto ml-5 justify-evenly py-2;
-      }
+    @apply flex flex-col;
+
+    &__Frame {
+        @apply bg-white shadow-md  rounded-3xl p-4;
+
+        &__Flex {
+            @apply flex-none lg:flex;
+
+            &__ImageContainer {
+                @apply h-full w-full lg:h-48 lg:w-48 lg:mb-0 mb-3;
+            }
+
+            &__DetailContainer {
+                @apply flex-auto ml-5 justify-evenly py-2;
+            }
+        }
     }
-  }
 }
 
 .boothImage {
-  @apply w-full object-scale-down lg:object-cover lg:h-48 rounded-2xl;
-  // image設定
-  background-image: url('../../../../public/booth.webp');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  width: 100%;
-  min-height: 192px;
+    @apply w-full object-scale-down lg:object-cover lg:h-48 rounded-2xl;
+    // image設定
+    background-image: url('../../../../public/booth.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 192px;
+    width: 100%;
 }
 
 .holoStoreImage {
-  @apply w-full object-scale-down lg:object-cover lg:h-48 rounded-2xl;
-  // image設定
-  background-image: url('../../../../public/hololivestore.webp');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  width: 100%;
-  min-height: 192px;
+    @apply w-full object-scale-down lg:object-cover lg:h-48 rounded-2xl;
+    // image設定
+    background-image: url('../../../../public/hololivestore.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 192px;
+    width: 100%;
 }

@@ -8,12 +8,12 @@ type Props = {
 
 const Layout: VFC<Props> = (props) => {
   return (
-    <div className="font-comfortaa flex flex-col justify-center min-h-screen">
+    <div className="flex flex-col justify-center min-h-screen">
       <Head>
         <title>潤羽るしあファンサイト</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="flex flex-col items-center justify-center w-full flex-1">
+      <main className="flex flex-col flex-1 justify-center items-center w-full">
         {props.children}
       </main>
       <Footer />

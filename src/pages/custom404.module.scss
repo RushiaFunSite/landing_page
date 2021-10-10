@@ -1,12 +1,14 @@
 .error_bg {
-  background-image: url('../../public/404.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+    background-image: url('../../public/404.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
 .tracking_tighter_less {
-  letter-spacing: -0.05rem;
+    letter-spacing: -0.05rem;
 }
+
 .text_shadow {
-  text-shadow: 2px 0 0 rgb(255 255 255);
+    text-shadow: 2px 0 0 rgb(255 255 255);
 }
