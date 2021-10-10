@@ -28,15 +28,15 @@ const ShopCard: VFC<ShopCardProps> = (props) => {
           </div>
           <div className={Styles.CardContainer__Frame__Flex__DetailContainer}>
             <div className="flex flex-wrap ">
-              <div className="w-full flex-none text-xs text-blue-700 font-medium ">
+              <div className="flex-none w-full text-xs font-medium text-primaryFont">
                 {props.shopCategory}
               </div>
               <h2 className="flex-auto text-lg font-medium">{props.shopName}</h2>
             </div>
             <p className="mt-3"></p>
-            <div className="flex py-4  text-sm text-gray-500">
-              <div className="flex-1 inline-flex items-center">
-                <VscLink className="h-5 w-5 mr-3 text-gray-400" />
+            <div className="flex py-4 text-sm text-gray-500">
+              <div className="inline-flex flex-1 items-center">
+                <VscLink className="mr-3 w-5 h-5 text-primaryItem" />
                 <p className="">{props.shopLinkText}</p>
               </div>
             </div>
