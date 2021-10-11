@@ -1,0 +1,56 @@
+.snsShare {
+    position: fixed;
+    right: 0;
+    top: 20%;
+    transform: translateY(-50%);
+    z-index: 50;
+}
+
+.stickyHeader {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+
+    &__layout {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+    }
+}
+
+// アニメーション
+.fadein {
+    // animation-delay: 1s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-name: fadein;
+    opacity: 0;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.fadeout {
+    // animation-delay: 1s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-name: fadeout;
+    opacity: 1;
+}
+
+@keyframes fadeout {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
