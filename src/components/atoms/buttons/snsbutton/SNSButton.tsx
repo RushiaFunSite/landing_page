@@ -1,41 +1,77 @@
 import React, { ReactChild } from 'react';
-import styles from './snsbutton.module.scss';
-import Router from 'next/router';
+import Styles from './snsbutton.module.scss';
+
+import {
+    FacebookShareButton,
+    LineShareButton,
+    RedditShareButton,
+    TwitterShareButton,
+} from 'react-share';
 
 export type SNSProps = {
-  children: ReactChild;
-  sns: string;
-  colorMode?: string;
+    children: ReactChild;
+    sns: string;
+    colorMode?: string;
 };
 
 const SNSButton = (props: SNSProps) => {
-  const twitter = 'https://twitter.com/uruharushia';
-  const youtube = 'https://www.youtube.com/channel/UCl_gCybOJRIgOXw6Qb4qJzQ';
-  const router = (snsName: string) => {
-    switch (snsName) {
-      case 'twitter':
-        Router.push(twitter);
-        break;
+    const siteUrl = 'http://www.uruharushia.work/';
+    const siteTitle = '潤羽るしあファンサイト';
 
-      case 'youtube':
-        Router.push(youtube);
-        break;
+    const Twitter = () => {
+        return (
+            <TwitterShareButton
+                className={Styles.sns_button}
+                url={siteUrl}
+                title={siteTitle}
+                hashtags={['潤羽るしあ']}
+                related={['uruharushia']}
+            >
+                {props.children}
+            </TwitterShareButton>
+        );
+    };
 
-      default:
-        break;
-    }
-  };
+    const Facebook = () => {
+        return (
+            <FacebookShareButton
+                className={Styles.sns_button}
+                url={siteUrl}
+                quote={siteTitle}
+                hashtag="潤羽るしあ"
+            >
+                {props.children}
+            </FacebookShareButton>
+        );
+    };
 
-  return (
-    <button
-      aria-label="snsButton"
-      type="button"
-      className={styles.sns_button}
-      onClick={() => router(props.sns)}
-    >
-      {props.children}
-    </button>
-  );
+    const Line = () => {
+        return (
+            <LineShareButton className={Styles.sns_button} url={siteUrl} title={siteTitle}>
+                {props.children}
+            </LineShareButton>
+        );
+    };
+
+    const Reddit = () => {
+        return (
+            <RedditShareButton className={Styles.sns_button} url={siteUrl} title={siteTitle}>
+                {props.children}
+            </RedditShareButton>
+        );
+    };
+
+    return props.sns === 'twitter' ? (
+        <Twitter />
+    ) : props.sns === 'facebook' ? (
+        <Facebook />
+    ) : props.sns === 'line' ? (
+        <Line />
+    ) : props.sns === 'reddit' ? (
+        <Reddit />
+    ) : (
+        <Twitter />
+    );
 };
 
 export default SNSButton;
