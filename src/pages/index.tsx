@@ -6,37 +6,35 @@ import GoodsSection from '@/components/templates/GoodsSection';
 import FAQSection from '@/components/templates/FAQSection';
 import Header from '@/components/organisms/header/Header';
 import useScroll from '@/hooks/useScroll';
+import useConsoleMessage from '@/hooks/useConsoleMessage';
+import useActiveSNSShare from '@/hooks/useActiveSNSShare';
+import SNSButtonGroup from '@/components/molecules/snsbuttongroup/SNSButtonGroup';
+import Styles from './index.module.scss';
+// import { useEffect, useState } from 'react';
 
 const Home: NextPage = () => {
-  const { isHeaderActive } = useScroll(900);
-  var url = 'https://www.uruharushia.work/console.gif';
-  console.log(
-    '%cなにみてるのです？',
-    'color:red; font-size:20px; padding: 10px; background: black; border-radius: 5px;',
-  );
-  console.log(
-    '%cハンバーグになるか冷蔵庫に入るかどっちがいい？',
-    'color:red; font-size:20px; padding: 10px; background: black; border-radius: 5px;',
-  );
-  console.log(
-    '%c ',
-    'padding: 128px 240px; background-repeat: no-repeat; background-position: center; background: url(' +
-      url +
-      ');',
-  );
-  return (
-    <Layout>
-      <div className="sticky top-0 z-50">
-        <div className="flex flex-col w-screen">
-          <Header isActive={isHeaderActive} />
-        </div>
-      </div>
-      <MainSection />
-      <AboutSection />
-      <GoodsSection />
-      <FAQSection />
-    </Layout>
-  );
+    const { isHeaderActive } = useScroll(900);
+    // コンソールログにメッセージ
+    useConsoleMessage();
+    const { active } = useActiveSNSShare('#MainSection');
+    const style = active ? Styles.fadein : Styles.fadeout;
+
+    return (
+        <Layout>
+            <aside className={[Styles.snsShare, style].join(' ')}>
+                <SNSButtonGroup label="SNS Share" />
+            </aside>
+            <div className={Styles.stickyHeader}>
+                <div className={Styles.stickyHeader__layout}>
+                    <Header isActive={isHeaderActive} />
+                </div>
+            </div>
+            <MainSection />
+            <AboutSection />
+            <GoodsSection />
+            <FAQSection />
+        </Layout>
+    );
 };
 
 export default Home;
