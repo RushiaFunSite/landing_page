@@ -112,4 +112,7 @@ chromatic（Storybook、ビジュアルリグレッションテスト）
 
 ## 参考
 
-[stylelint 設定](https://gist.github.com/buchiya4th/f4ca1be2ab98ee5a8098fa68a93e752c)
+[stylelint 設定](https://gist.github.com/buchiya4th/f4ca1be2ab98ee5a8098fa68a93e752c)  
+[IntersectionObserver の型定義参考](https://microsoft.github.io/PowerBI-JavaScript/interfaces/_node_modules_typedoc_node_modules_typescript_lib_lib_dom_d_.intersectionobserver.html)  
+[IntersectionObserver の動き参考](https://sbfl.net/blog/static/demo/intersectionobserver/)
+[PWA 動画フォールバック](https://github.com/shadowwalker/next-pwa/blob/master/examples/offline-fallback-v2/next.config.js)
