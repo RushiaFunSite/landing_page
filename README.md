@@ -24,6 +24,9 @@ _当サイトはカバー株式会社の[ガイドライン](https://www.hololiv
 - storybook
 - jest
 
+## インフラ構成図
+<img alt="インフラ構成図" src="./fansite.drawio.svg"/>
+
 ## Getting Started
 
 パッケージの導入
